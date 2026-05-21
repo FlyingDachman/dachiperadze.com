@@ -43,7 +43,7 @@
 
   --nav-h: 66px;
   --max: 1260px;
-  --pad: 3.5rem;
+  --pad: 3rem;
   --r: 3px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -137,7 +137,7 @@ nav.scrolled {
 .nav-logo-dot { color: var(--gold); }
 .nav-menu {
   display: flex; align-items: center;
-  gap: 2.8rem; list-style: none;
+  gap: 2rem; list-style: none;
 }
 .nav-menu a {
   font-size: 0.62rem; font-weight: 600;
@@ -235,11 +235,11 @@ nav.scrolled {
 .hero-main {
   max-width: var(--max);
   margin: 0 auto;
-  padding: calc(var(--nav-h) + 6rem) var(--pad) 4rem;
+  padding: calc(var(--nav-h) + 4rem) var(--pad) 3rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 5rem;
+  gap: 3rem;
   align-items: end;
   position: relative; z-index: 3;
 }
@@ -249,7 +249,7 @@ nav.scrolled {
   font-size: 0.6rem; font-weight: 700;
   letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 2.8rem;
+  margin-bottom: 1.2rem;
   opacity: 0;
   animation: fadeSlideUp 0.7s var(--ease-out) 0.2s forwards;
 }
@@ -260,7 +260,7 @@ nav.scrolled {
   font-family: var(--display);
   font-size: clamp(3.4rem, 6.8vw, 6rem);
   font-weight: 300;
-  line-height: 1.02;
+  line-height: 1.04;
   color: var(--ivory);
   letter-spacing: -0.015em;
   opacity: 0;
@@ -281,7 +281,7 @@ nav.scrolled {
   font-size: 0.9rem;
   color: var(--stone);
   line-height: 1.9; font-weight: 400;
-  max-width: 400px;
+  max-width: 360px;
   padding-left: 1.5rem;
   border-left: 1px solid var(--gold-line2);
 }
@@ -362,21 +362,26 @@ nav.scrolled {
   border-top: 1px solid var(--gold-line);
   border-bottom: 1px solid var(--gold-line);
   background: var(--deep);
-  overflow: hidden; padding: 0.85rem 0;
+  overflow: hidden; padding: 0.6rem 0;
   position: relative; z-index: 4;
   white-space: nowrap; /* Ensure no wrapping */
 }
 .ticker-track {
-  display: inline-flex; /* Changed from flex to inline-flex for better control */
+  display: block;
   white-space: nowrap;
-  animation: roll 35s linear infinite;
+  overflow: hidden;
   will-change: transform; /* Hardware acceleration */
 }
-.ticker-track:hover { animation-play-state: paused; }
+.ticker-track-inner {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: roll 30s linear infinite;
+  will-change: transform;
+}
 .t-item {
   font-size: 0.58rem; font-weight: 700;
   letter-spacing: 0.24em; text-transform: uppercase;
-  color: var(--slate); padding: 0 1.8rem; flex-shrink: 0;
+  color: var(--slate); padding: 0 1rem; flex-shrink: 0;
   display: inline-block; /* Ensure consistent sizing */
 }
 .t-item.hi { color: var(--gold); }
@@ -410,8 +415,8 @@ nav.scrolled {
 .practice-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem; align-items: end;
-  margin-bottom: 5rem;
+  gap: 3rem; align-items: end;
+  margin-bottom: 3rem;
 }
 .practice-intro { padding-top: 1.5rem; }
 .practice-intro p { font-size: 0.88rem; color: var(--stone); line-height: 1.9; font-weight: 400; }
@@ -425,10 +430,10 @@ nav.scrolled {
 }
 .s-row-in {
   display: grid;
-  grid-template-columns: 72px 280px 1fr 52px;
+  grid-template-columns: 64px 260px 1fr 48px;
   align-items: center;
-  gap: 2rem; padding: 2.2rem var(--pad);
-  transition: background 0.35s;
+  gap: 1.2rem; padding: 1.4rem var(--pad);
+  transition: background 0.25s;
 }
 .s-row:hover .s-row-in { background: var(--gold-ghost); }
 .s-row::before {
@@ -491,13 +496,13 @@ nav.scrolled {
 .record-in {
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
-  min-height: 560px;
+  min-height: 420px;
   max-width: var(--max);
   margin: 0 auto;
   position: relative; z-index: 2;
 }
 .record-sep { background: var(--gold-line); }
-.record-left { padding: 5.5rem var(--pad) 5.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+.record-left { padding: 3.5rem var(--pad) 3.5rem; display: flex; flex-direction: column; justify-content: space-between; }
 .record-badge {
   display: inline-flex; align-items: center; gap: 0.6rem;
   font-size: 0.58rem; font-weight: 700;
@@ -578,12 +583,11 @@ blockquote.verdict-q {
 .method-title em { font-style: italic; color: var(--gold); }
 .method-tagline { font-size: 0.78rem; color: var(--stone); line-height: 1.8; max-width: 260px; }
 .method-r { display: grid; grid-template-columns: 1fr 1fr 1fr; }
-.method-item { padding: 5.5rem 2.5rem; border-right: 1px solid var(--gold-line); position: relative; }
-.method-item:last-child { border-right: none; }
-.method-n { font-family: var(--display); font-size: 5rem; font-weight: 300; color: rgba(191,154,66,0.1); line-height: 1; letter-spacing: -0.04em; margin-bottom: 2rem; }
-.method-h { font-family: var(--display); font-size: 1.2rem; font-weight:
-  .method-h { font-family: var(--display); font-size: 1.2rem; font-weight: 500; color: var(--ivory); margin-bottom: 0.8rem; line-height: 1.2; }
-  .method-p { font-size: 0.8rem; color: var(--stone); line-height: 1.82; font-weight: 400; }
+    .method-item { padding: 5.5rem 2.5rem; border-right: 1px solid var(--gold-line); position: relative; }
+    .method-item:last-child { border-right: none; }
+    .method-n { font-family: var(--display); font-size: 5rem; font-weight: 300; color: rgba(191,154,66,0.1); line-height: 1; letter-spacing: -0.04em; margin-bottom: 2rem; }
+    .method-h { font-family: var(--display); font-size: 1.2rem; font-weight: 500; color: var(--ivory); margin-bottom: 0.8rem; line-height: 1.2; }
+    .method-p { font-size: 0.8rem; color: var(--stone); line-height: 1.82; font-weight: 400; margin: 0; }
 
   /* ══ CTA STRIP ══ */
   .cta-strip {
@@ -748,7 +752,7 @@ blockquote.verdict-q {
     a, button { cursor: pointer !important; }
     
     /* Ticker Mobile Fix */
-    .ticker-track { animation-duration: 45s; } /* Slower for mobile */
+    .ticker-track-inner { animation-duration: 45s; } /* Slower for mobile */
   }
 
   /* Accessibility */
@@ -759,7 +763,7 @@ blockquote.verdict-q {
       animation-iteration-count: 1 !important;
       transition-duration: 0.001ms !important;
     }
-    .ticker-track { animation: none !important; }
+    .ticker-track-inner { animation: none !important; }
   }
 
 </style>
@@ -878,10 +882,12 @@ blockquote.verdict-q {
 <!-- ══════════ TICKER (FIXED) ══════════ -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track" id="tickerTrack">
-    <!-- COPY 1 -->
-    <span class="t-item hi">FIFA Football Tribunal</span><span class="t-item">·</span><span class="t-item">CAS Arbitration</span><span class="t-item">·</span><span class="t-item hi">FFAR Compliance</span><span class="t-item">·</span><span class="t-item">Article 17 RSTP</span><span class="t-item">·</span><span class="t-item hi">Diarra Ruling</span><span class="t-item">·</span><span class="t-item">Training Compensation</span><span class="t-item">·</span><span class="t-item hi">DRC Proceedings</span><span class="t-item">·</span><span class="t-item">Solidarity Mechanism</span><span class="t-item">·</span><span class="t-item hi">Contract Stability</span><span class="t-item">·</span><span class="t-item">Lex Sportiva</span><span class="t-item">·</span><span class="t-item hi">Cross-Border Disputes</span><span class="t-item">·</span><span class="t-item">Player Status</span><span class="t-item">·</span>
-    <!-- COPY 2 (Exact Duplicate) -->
-    <span class="t-item hi">FIFA Football Tribunal</span><span class="t-item">·</span><span class="t-item">CAS Arbitration</span><span class="t-item">·</span><span class="t-item hi">FFAR Compliance</span><span class="t-item">·</span><span class="t-item">Article 17 RSTP</span><span class="t-item">·</span><span class="t-item hi">Diarra Ruling</span><span class="t-item">·</span><span class="t-item">Training Compensation</span><span class="t-item">·</span><span class="t-item hi">DRC Proceedings</span><span class="t-item">·</span><span class="t-item">Solidarity Mechanism</span><span class="t-item">·</span><span class="t-item hi">Contract Stability</span><span class="t-item">·</span><span class="t-item">Lex Sportiva</span><span class="t-item">·</span><span class="t-item hi">Cross-Border Disputes</span><span class="t-item">·</span><span class="t-item">Player Status</span><span class="t-item">·</span>
+    <div class="ticker-track-inner" id="tickerInner">
+      <!-- COPY 1 -->
+      <span class="t-item hi">FIFA Football Tribunal</span><span class="t-item">·</span><span class="t-item">CAS Arbitration</span><span class="t-item">·</span><span class="t-item hi">FFAR Compliance</span><span class="t-item">·</span><span class="t-item">Article 17 RSTP</span><span class="t-item">·</span><span class="t-item hi">Diarra Ruling</span><span class="t-item">·</span><span class="t-item">Training Compensation</span><span class="t-item">·</span><span class="t-item hi">DRC Proceedings</span><span class="t-item">·</span><span class="t-item">Solidarity Mechanism</span><span class="t-item">·</span><span class="t-item hi">Contract Stability</span><span class="t-item">·</span><span class="t-item">Lex Sportiva</span><span class="t-item">·</span><span class="t-item hi">Cross-Border Disputes</span><span class="t-item">·</span><span class="t-item">Player Status</span><span class="t-item">·</span>
+      <!-- COPY 2 (Exact Duplicate) -->
+      <span class="t-item hi">FIFA Football Tribunal</span><span class="t-item">·</span><span class="t-item">CAS Arbitration</span><span class="t-item">·</span><span class="t-item hi">FFAR Compliance</span><span class="t-item">·</span><span class="t-item">Article 17 RSTP</span><span class="t-item">·</span><span class="t-item hi">Diarra Ruling</span><span class="t-item">·</span><span class="t-item">Training Compensation</span><span class="t-item">·</span><span class="t-item hi">DRC Proceedings</span><span class="t-item">·</span><span class="t-item">Solidarity Mechanism</span><span class="t-item">·</span><span class="t-item hi">Contract Stability</span><span class="t-item">·</span><span class="t-item">Lex Sportiva</span><span class="t-item">·</span><span class="t-item hi">Cross-Border Disputes</span><span class="t-item">·</span><span class="t-item">Player Status</span><span class="t-item">·</span>
+    </div>
   </div>
 </div>
 
@@ -1096,7 +1102,7 @@ const curR = document.getElementById('cur-r');
 let mx = 0, my = 0, rx = window.innerWidth/2, ry = window.innerHeight/2;
 
 if (!('ontouchstart' in window)) {
-  document.addEventListener('mousemove', e => { mx = e.clientX; my document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
   function loopCursor() {
     cur.style.left = mx + 'px'; cur.style.top = my + 'px';
     rx += (mx - rx) * 0.13; ry += (my - ry) * 0.13;
@@ -1175,12 +1181,74 @@ reveals.forEach(el => observer.observe(el));
 /* ── TICKER FORCE START ── */
 // This forces the animation to restart cleanly on load
 window.addEventListener('load', () => {
-  const track = document.getElementById('tickerTrack');
-  if (track) {
-    track.style.animation = 'none';
-    track.offsetHeight; /* Trigger reflow */
-    track.style.animation = 'roll 35s linear infinite';
+  const inner = document.getElementById('tickerInner');
+  if (inner) {
+    inner.style.animation = 'none';
+    inner.offsetHeight; /* Trigger reflow */
+    inner.style.animation = 'roll 30s linear infinite';
   }
+});
+
+/* ── TICKER: ensure continuous copy fill ── */
+function ensureTickerFill() {
+  const inner = document.getElementById('tickerInner');
+  if (!inner) return;
+
+  // If the track's content isn't wide enough for a seamless loop,
+  // duplicate the child items (not the track element) until the scrollWidth is at least twice the viewport.
+  const minWidth = window.innerWidth * 2;
+  let attempts = 0;
+  const originalChildren = Array.from(inner.children);
+  while (inner.scrollWidth < minWidth && attempts < 10) {
+    originalChildren.forEach(child => inner.appendChild(child.cloneNode(true)));
+    attempts++;
+  }
+}
+
+window.addEventListener('load', () => {
+  ensureTickerFill();
+});
+window.addEventListener('resize', () => {
+  // small debounce
+  clearTimeout(window._tickerResize);
+  window._tickerResize = setTimeout(ensureTickerFill, 150);
+});
+
+/* ── TICKER FALLBACK ANIMATION (rAF) ── */
+function startTickerRAF() {
+  const inner = document.getElementById('tickerInner');
+  if (!inner) return;
+  // Respect reduced-motion
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let px = 0;
+  const speed = 60; // px per second
+  let last = performance.now();
+
+  function step(now) {
+    const dt = (now - last) / 1000;
+    last = now;
+    px += speed * dt;
+    // when px exceeds half the inner width (we duplicate content), wrap
+    const wrapAt = inner.scrollWidth / 2;
+    if (wrapAt > 0 && px >= wrapAt) px = px - wrapAt;
+    inner.style.transform = 'translateX(' + (-px) + 'px)';
+    window._tickerRAF = requestAnimationFrame(step);
+  }
+
+  // stop any CSS animation to avoid conflicts
+  inner.style.animation = 'none';
+  inner.style.willChange = 'transform';
+  if (window._tickerRAF) cancelAnimationFrame(window._tickerRAF);
+  last = performance.now();
+  window._tickerRAF = requestAnimationFrame(step);
+}
+
+window.addEventListener('load', () => {
+  // give duplication a moment then start rAF animation
+  setTimeout(() => {
+    startTickerRAF();
+  }, 50);
 });
 </script>
 </body>
