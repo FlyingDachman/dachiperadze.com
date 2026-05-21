@@ -6,7 +6,11 @@
 <title>Services &amp; Fees | Dachi Peradze — FIFA &amp; CAS Sports Lawyer</title>
 <meta name="description" content="Transparent pricing for specialist football law — FIFA Tribunal representation, CAS arbitration, FFAR compliance retainer, and football contract drafting from Dachi Peradze at dachiperadze.com.">
 <meta name="keywords" content="FIFA Tribunal lawyer fees, CAS arbitration legal fees, FFAR compliance retainer, football contract lawyer fees, sports law counsel cost, Dachi Peradze fees">
-<link rel="canonical" href="https://dachiperadze.com/pricing">
+<meta property="og:title" content="Services &amp; Fees | Dachi Peradze — FIFA &amp; CAS Sports Lawyer">
+<meta property="og:description" content="Transparent pricing for specialist football law — FIFA Tribunal representation, CAS arbitration, FFAR compliance, and contract drafting.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dachiperadze.com/pricing.html">
+<link rel="canonical" href="https://dachiperadze.com/pricing.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -592,6 +596,18 @@ footer {
   #cur, #cur-r { display: none; }
   a, button { cursor: pointer !important; }
 }
+
+/* Accessibility: respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .ticker-track { animation: none !important; }
+}
+
 </style>
 </head>
 <body>
@@ -610,7 +626,7 @@ footer {
       <li><a href="index.html#about">About</a></li>
       <li><a href="pricing.html" class="nav-active">Services &amp; Fees</a></li>
     </ul>
-    <button class="nav-burger" id="burger" aria-label="Menu">
+    <button class="nav-burger" id="burger" aria-label="Menu" aria-controls="drawer" aria-expanded="false" type="button">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -791,15 +807,15 @@ footer {
       <div class="faq-list reveal reveal-d2">
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" aria-expanded="false" onclick="toggleFaq(this)">
             Do you act for both clubs and agents?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">Yes. Dachi Peradze advises clubs, FIFA-licensed football agents, and players. The practice has acted for claimants and respondents in FIFA Tribunal proceedings, contract disputes, and FFAR compliance matters — the side of the dispute does not define the scope of instruction.</div>
+          <div class="faq-a">Yes. Peradze.Law advises clubs, FIFA-licensed football agents, and players. The practice has acted for claimants and respondents in FIFA Tribunal proceedings, contract disputes, and FFAR compliance matters — the side of the dispute does not define the scope of instruction.</div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" aria-expanded="false" onclick="toggleFaq(this)">
             Can I instruct you from outside Georgia?
             <span class="faq-icon">+</span>
           </button>
@@ -807,7 +823,7 @@ footer {
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" aria-expanded="false" onclick="toggleFaq(this)">
             How are fees structured for FIFA Tribunal cases?
             <span class="faq-icon">+</span>
           </button>
@@ -815,7 +831,7 @@ footer {
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" aria-expanded="false" onclick="toggleFaq(this)">
             What does the retainer include and is it flexible?
             <span class="faq-icon">+</span>
           </button>
@@ -823,15 +839,15 @@ footer {
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" aria-expanded="false" onclick="toggleFaq(this)">
             Do you act as specialist counsel for other law firms?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">Yes. Dachi Peradze operates both on direct instruction from clubs and agents, and as specialist sports law counsel supporting established firms who require deep FIFA and CAS expertise on a subcontracting basis. If you are a firm with a client matter requiring specialist football law input, enquiries are welcome at legal@dachiperadze.com.</div>
+          <div class="faq-a">Yes. Peradze.Law operates both on direct instruction from clubs and agents, and as specialist sports law counsel supporting established firms who require deep FIFA and CAS expertise on a subcontracting basis. If you are a firm with a client matter requiring specialist football law input, enquiries are welcome at legal@dachiperadze.com.</div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" aria-expanded="false" onclick="toggleFaq(this)">
             Are the prices on this page fixed?
             <span class="faq-icon">+</span>
           </button>
@@ -839,7 +855,7 @@ footer {
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" aria-expanded="false" onclick="toggleFaq(this)">
             How current is your knowledge of FFAR and RSTP developments?
             <span class="faq-icon">+</span>
           </button>
@@ -860,22 +876,22 @@ footer {
     </div>
     <div class="contact-grid">
       <div class="contact-left reveal reveal-d1">
-        <div class="contact-form">
+        <form id="enquiryForm" class="contact-form">
           <div class="field-group">
-            <label class="field-label">Your Name</label>
-            <input class="field-input" type="text" placeholder="Full name">
+            <label class="field-label" for="enquiryName">Your Name</label>
+            <input id="enquiryName" name="name" class="field-input" type="text" placeholder="Full name" autocomplete="name" required>
           </div>
           <div class="field-group">
-            <label class="field-label">Email Address</label>
-            <input class="field-input" type="email" placeholder="your@email.com">
+            <label class="field-label" for="enquiryEmail">Email Address</label>
+            <input id="enquiryEmail" name="email" class="field-input" type="email" placeholder="your@email.com" autocomplete="email" required>
           </div>
           <div class="field-group">
-            <label class="field-label">Organisation (if applicable)</label>
-            <input class="field-input" type="text" placeholder="Club, agency, or law firm name">
+            <label class="field-label" for="enquiryOrganisation">Organisation (if applicable)</label>
+            <input id="enquiryOrganisation" name="organisation" class="field-input" type="text" placeholder="Club, agency, or law firm name" autocomplete="organization">
           </div>
           <div class="field-group">
-            <label class="field-label">Matter Type</label>
-            <select class="field-select">
+            <label class="field-label" for="enquiryMatter">Matter Type</label>
+            <select id="enquiryMatter" name="matter" class="field-select" required>
               <option value="" disabled selected>Select a service</option>
               <option>Contract Review / Drafting</option>
               <option>FIFA Tribunal Representation</option>
@@ -887,14 +903,14 @@ footer {
             </select>
           </div>
           <div class="field-group">
-            <label class="field-label">Brief description of your matter</label>
-            <textarea class="field-textarea" placeholder="Parties involved, nature of dispute or contract, any deadlines or urgency..."></textarea>
+            <label class="field-label" for="enquiryMessage">Brief description of your matter</label>
+            <textarea id="enquiryMessage" name="message" class="field-textarea" placeholder="Parties involved, nature of dispute or contract, any deadlines or urgency..." required></textarea>
           </div>
-          <a class="contact-submit" href="mailto:legal@dachiperadze.com?subject=New%20Legal%20Enquiry">
+          <button class="contact-submit" type="submit">
             Send to legal@dachiperadze.com →
-          </a>
-          <p class="contact-note">Opens your email client · All enquiries answered within 48 hours</p>
-        </div>
+          </button>
+          <p class="contact-note">Opens your email client with your enquiry pre-filled · All enquiries answered within 48 hours</p>
+        </form>
       </div>
 
       <div class="contact-right reveal reveal-d2">
@@ -904,7 +920,7 @@ footer {
         </div>
         <div class="contact-info-block">
           <span class="ci-label">Website</span>
-          <div class="ci-val"><a href="https://dachiperadze.com" target="_blank">dachiperadze.com</a></div>
+          <div class="ci-val"><a href="https://dachiperadze.com" target="_blank" rel="noopener noreferrer">dachiperadze.com</a></div>
         </div>
         <div class="contact-info-block">
           <span class="ci-label">Practice Base</span>
@@ -935,7 +951,7 @@ footer {
   <div class="footer-top">
     <a class="footer-logo" href="index.html">DACHI<em>·</em>PERADZE</a>
     <a class="footer-contact" href="mailto:legal@dachiperadze.com">legal@dachiperadze.com</a>
-    <div class="footer-r">© 2025 Dachi Peradze<br>dachiperadze.com</div>
+    <div class="footer-r">© 2026 Dachi Peradze<br>dachiperadze.com</div>
   </div>
   <div class="footer-disc">
     This website is for informational purposes only and does not constitute legal advice. Fees shown are indicative starting points only — actual engagement fees are confirmed in writing prior to instruction. No lawyer-client relationship is established by visiting this site. Prior results in individual matters do not guarantee future outcomes.
@@ -963,15 +979,22 @@ document.querySelectorAll('a,button').forEach(el => {
 /* Progress */
 const pg = document.getElementById('pg');
 window.addEventListener('scroll', () => {
-  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+  const scrollable = document.body.scrollHeight - window.innerHeight;
+  const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
   pg.style.width = pct + '%';
 }, { passive:true });
 
 /* Burger */
 const burger = document.getElementById('burger');
 const drawer = document.getElementById('drawer');
-burger.addEventListener('click', () => drawer.classList.toggle('open'));
-drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+burger.addEventListener('click', () => {
+  const isOpen = drawer.classList.toggle('open');
+  burger.setAttribute('aria-expanded', String(isOpen));
+});
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  drawer.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+}));
 
 /* Scroll reveal */
 const reveals = document.querySelectorAll('.reveal');
@@ -980,12 +1003,59 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 reveals.forEach(el => obs.observe(el));
 
+
+/* Contact form: build a pre-filled email from the fields */
+const enquiryForm = document.getElementById('enquiryForm');
+if (enquiryForm) {
+  enquiryForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (!enquiryForm.reportValidity()) return;
+
+    const data = new FormData(enquiryForm);
+    const name = (data.get('name') || '').trim();
+    const email = (data.get('email') || '').trim();
+    const organisation = (data.get('organisation') || '').trim();
+    const matter = (data.get('matter') || '').trim();
+    const message = (data.get('message') || '').trim();
+
+    const subject = `New Legal Enquiry — ${matter || 'Website'}`;
+    const body = [
+      'New enquiry from dachiperadze.com',
+      '',
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Organisation: ${organisation || 'N/A'}`,
+      `Matter type: ${matter || 'N/A'}`,
+      '',
+      'Brief description:',
+      message,
+      '',
+      '---',
+      'Sent from the Services & Fees page.'
+    ].join('\n');
+
+    window.location.href = `mailto:legal@dachiperadze.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
+
 /* FAQ */
 function toggleFaq(btn) {
   const item = btn.parentElement;
   const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
+
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    const openButton = i.querySelector('.faq-q');
+    if (openButton) openButton.setAttribute('aria-expanded', 'false');
+  });
+
+  if (!isOpen) {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+  } else {
+    btn.setAttribute('aria-expanded', 'false');
+  }
 }
 </script>
 </body>
