@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dachi Peradze | International Sports Lawyer | FIFA · CAS · FFAR</title>
-<meta name="description" content="Dachi Peradze is an international sports lawyer specialising in FIFA Football Tribunal proceedings, CAS arbitration, FFAR compliance, and Article 17 RSTP disputes.">
-<meta name="keywords" content="FIFA Football Tribunal lawyer, CAS arbitration, FFAR compliance, Article 17 RSTP, football agent legal services">
+<meta name="description" content="Dachi Peradze is an international sports lawyer specialising in FIFA Football Tribunal proceedings, CAS arbitration, FFAR compliance, and Article 17 RSTP disputes. Representing clubs, agents and players globally from dachiperadze.com.">
+<meta name="keywords" content="FIFA Football Tribunal lawyer, CAS arbitration sports law, FFAR compliance counsel, Article 17 RSTP, football agent legal services, international football contract lawyer, sports law Georgia, FIFA disciplinary proceedings, player contract dispute, football law specialist, FIFA Football Agent Regulations, sports arbitration attorney, Dachi Peradze">
 <meta property="og:title" content="Dachi Peradze | International Sports Lawyer">
-<meta property="og:description" content="Specialist FIFA Tribunal, CAS arbitration and FFAR counsel.">
+<meta property="og:description" content="Specialist FIFA Tribunal, CAS arbitration and FFAR counsel — dachiperadze.com">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dachiperadze.com">
 <link rel="canonical" href="https://dachiperadze.com">
@@ -22,30 +22,38 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --void: #05050D;
-  --deep: #09091A;
-  --dark: #0D0D22;
-  --surface: #11112A;
-  --gold: #BF9A42;
-  --gold-hi: #D4B265;
-  --gold-lo: #7A6028;
-  --gold-ghost: rgba(191,154,66,0.08);
+  /* Palette */
+  --void:      #05050D;
+  --deep:      #09091A;
+  --dark:      #0D0D22;
+  --surface:   #11112A;
+  --gold:      #BF9A42;
+  --gold-hi:   #D4B265;
+  --gold-lo:   #7A6028;
+  --gold-ghost:rgba(191,154,66,0.08);
   --gold-line: rgba(191,154,66,0.18);
-  --gold-line2: rgba(191,154,66,0.32);
-  --ivory: #EDE8DC;
-  --stone: #A09B90;
-  --slate: #5C5750;
-  --charcoal: #2E2C28;
+  --gold-line2:rgba(191,154,66,0.32);
+  --ivory:     #EDE8DC;
+  --stone:     #A09B90;
+  --slate:     #5C5750;
+  --charcoal:  #2E2C28;
 
+  /* Typography */
   --display: 'Cormorant Garamond', Georgia, serif;
-  --ui: 'Syne', system-ui, sans-serif;
-  --mono: 'JetBrains Mono', monospace;
+  --ui:      'Syne', system-ui, sans-serif;
+  --mono:    'JetBrains Mono', monospace;
 
-  --nav-h: 66px;
-  --max: 1260px;
-  --pad: 3rem;
+  /* Spacing */
+  --nav-h:   66px;
+  --max:     1260px;
+  --pad:     3.5rem;
+
+  /* Radius */
   --r: 3px;
+
+  /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:  cubic-bezier(0.7, 0, 0.84, 0);
 }
 
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -56,6 +64,7 @@ body {
   color: var(--ivory);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   cursor: none;
 }
@@ -79,9 +88,15 @@ body {
   width: 32px; height: 32px;
   border: 1px solid var(--gold-line2);
   transform: translate(-50%,-50%);
-  transition: width 0.25s var(--ease-out), height 0.25s var(--ease-out), border-color 0.2s, opacity 0.3s;
+  transition: width 0.25s var(--ease-out),
+              height 0.25s var(--ease-out),
+              border-color 0.2s,
+              opacity 0.3s;
 }
-body.cursor-hover #cur-r { width: 48px; height: 48px; border-color: var(--gold); }
+body.cursor-hover #cur-r {
+  width: 48px; height: 48px;
+  border-color: var(--gold);
+}
 body.cursor-hover #cur { opacity: 0.6; }
 
 /* ── PROGRESS BAR ── */
@@ -137,7 +152,7 @@ nav.scrolled {
 .nav-logo-dot { color: var(--gold); }
 .nav-menu {
   display: flex; align-items: center;
-  gap: 2rem; list-style: none;
+  gap: 2.8rem; list-style: none;
 }
 .nav-menu a {
   font-size: 0.62rem; font-weight: 600;
@@ -212,6 +227,7 @@ nav.scrolled {
   overflow: hidden;
 }
 
+/* Geometric background */
 .hero-geo {
   position: absolute; inset:0;
   pointer-events: none; z-index: 2;
@@ -223,6 +239,7 @@ nav.scrolled {
   opacity: 0.6;
 }
 
+/* Radial glow */
 .hero::after {
   content: '';
   position: absolute;
@@ -235,39 +252,51 @@ nav.scrolled {
 .hero-main {
   max-width: var(--max);
   margin: 0 auto;
-  padding: calc(var(--nav-h) + 4rem) var(--pad) 3rem;
+  padding: calc(var(--nav-h) + 6rem) var(--pad) 4rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 3rem;
+  gap: 5rem;
   align-items: end;
   position: relative; z-index: 3;
 }
+
+.hero-left {}
 
 .hero-eyebrow {
   display: flex; align-items: center; gap: 0.8rem;
   font-size: 0.6rem; font-weight: 700;
   letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.8rem;
   opacity: 0;
   animation: fadeSlideUp 0.7s var(--ease-out) 0.2s forwards;
 }
-.hero-eyebrow-line { display: block; width: 24px; height: 1px; background: var(--gold); flex-shrink: 0; }
-.hero-eyebrow-dot { display: block; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); margin: 0 0.3rem; }
+.hero-eyebrow-line {
+  display: block; width: 24px; height: 1px;
+  background: var(--gold); flex-shrink: 0;
+}
+.hero-eyebrow-dot {
+  display: block; width: 4px; height: 4px;
+  border-radius: 50%; background: var(--gold);
+  margin: 0 0.3rem;
+}
 
 .hero-h1 {
   font-family: var(--display);
   font-size: clamp(3.4rem, 6.8vw, 6rem);
   font-weight: 300;
-  line-height: 1.04;
+  line-height: 1.02;
   color: var(--ivory);
   letter-spacing: -0.015em;
   opacity: 0;
   animation: fadeSlideUp 0.9s var(--ease-out) 0.4s forwards;
 }
 .hero-h1 em { font-style: italic; color: var(--gold); }
-.hero-h1 .hero-h1-dim { color: rgba(237,232,220,0.28); display: block; }
+.hero-h1 .hero-h1-dim {
+  color: rgba(237,232,220,0.28);
+  display: block;
+}
 
 .hero-right {
   display: flex; flex-direction: column;
@@ -281,21 +310,29 @@ nav.scrolled {
   font-size: 0.9rem;
   color: var(--stone);
   line-height: 1.9; font-weight: 400;
-  max-width: 360px;
+  max-width: 400px;
   padding-left: 1.5rem;
   border-left: 1px solid var(--gold-line2);
 }
 
-.hero-credentials { display: flex; flex-direction: column; gap: 0.55rem; }
+.hero-credentials {
+  display: flex; flex-direction: column; gap: 0.55rem;
+}
 .hero-cred-item {
   display: flex; align-items: center; gap: 0.9rem;
   font-size: 0.68rem; font-weight: 500;
   letter-spacing: 0.1em; color: var(--slate);
 }
-.hero-cred-item::before { content: ''; display: block; width: 18px; height: 1px; background: var(--gold-lo); flex-shrink: 0; }
+.hero-cred-item::before {
+  content: ''; display: block;
+  width: 18px; height: 1px;
+  background: var(--gold-lo); flex-shrink: 0;
+}
 .hero-cred-item strong { color: var(--stone); font-weight: 600; }
 
-.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-btns {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
 .btn-gold {
   font-family: var(--ui);
   font-size: 0.63rem; font-weight: 700;
@@ -323,6 +360,7 @@ nav.scrolled {
 }
 .btn-ghost:hover { border-color: var(--gold-lo); color: var(--gold); }
 
+/* Hero footer row */
 .hero-foot {
   max-width: var(--max);
   margin: 0 auto;
@@ -334,6 +372,7 @@ nav.scrolled {
   animation: fadeSlideUp 0.9s var(--ease-out) 0.85s forwards;
 }
 .hero-stats { display: flex; gap: 3.5rem; }
+.hero-stat {}
 .h-stat-n {
   font-family: var(--display);
   font-size: 2.6rem; font-weight: 300;
@@ -357,32 +396,23 @@ nav.scrolled {
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
-/* ── TICKER (FIXED) ── */
+/* ── TICKER ── */
 .ticker {
   border-top: 1px solid var(--gold-line);
   border-bottom: 1px solid var(--gold-line);
   background: var(--deep);
-  overflow: hidden; padding: 0.6rem 0;
+  overflow: hidden; padding: 0.85rem 0;
   position: relative; z-index: 4;
-  white-space: nowrap; /* Ensure no wrapping */
 }
 .ticker-track {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  will-change: transform; /* Hardware acceleration */
+  display: flex; white-space: nowrap;
+  animation: roll 35s linear infinite;
 }
-.ticker-track-inner {
-  display: inline-flex;
-  white-space: nowrap;
-  animation: roll 30s linear infinite;
-  will-change: transform;
-}
+.ticker-track:hover { animation-play-state: paused; }
 .t-item {
   font-size: 0.58rem; font-weight: 700;
   letter-spacing: 0.24em; text-transform: uppercase;
-  color: var(--slate); padding: 0 1rem; flex-shrink: 0;
-  display: inline-block; /* Ensure consistent sizing */
+  color: var(--slate); padding: 0 1.8rem; flex-shrink: 0;
 }
 .t-item.hi { color: var(--gold); }
 
@@ -400,7 +430,11 @@ nav.scrolled {
   letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 1.4rem;
 }
-.s-label::before { content: ''; display: block; width: 14px; height: 1px; background: var(--gold); flex-shrink: 0; }
+.s-label::before {
+  content: ''; display: block;
+  width: 14px; height: 1px;
+  background: var(--gold); flex-shrink: 0;
+}
 
 .s-title {
   font-family: var(--display);
@@ -411,18 +445,27 @@ nav.scrolled {
 .s-title em { font-style: italic; color: var(--gold); }
 
 /* ══ PRACTICE SECTION ══ */
-.practice { padding: 8rem 0 0; }
+.practice {
+  padding: 8rem 0 0;
+}
 .practice-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem; align-items: end;
-  margin-bottom: 3rem;
+  gap: 4rem; align-items: end;
+  margin-bottom: 5rem;
 }
-.practice-intro { padding-top: 1.5rem; }
-.practice-intro p { font-size: 0.88rem; color: var(--stone); line-height: 1.9; font-weight: 400; }
+.practice-intro {
+  padding-top: 1.5rem;
+}
+.practice-intro p {
+  font-size: 0.88rem; color: var(--stone);
+  line-height: 1.9; font-weight: 400;
+}
 .practice-intro p + p { margin-top: 1rem; }
 
+/* Service table */
 .s-table { border-top: 1px solid var(--gold-line); }
+
 .s-row {
   border-bottom: 1px solid var(--gold-line);
   position: relative; overflow: hidden;
@@ -430,12 +473,14 @@ nav.scrolled {
 }
 .s-row-in {
   display: grid;
-  grid-template-columns: 64px 260px 1fr 48px;
+  grid-template-columns: 72px 280px 1fr 52px;
   align-items: center;
-  gap: 1.2rem; padding: 1.4rem var(--pad);
-  transition: background 0.25s;
+  gap: 2rem; padding: 2.2rem var(--pad);
+  transition: background 0.35s;
 }
 .s-row:hover .s-row-in { background: var(--gold-ghost); }
+
+/* Gold bar on hover */
 .s-row::before {
   content: '';
   position: absolute; top:0; left:0; bottom:0;
@@ -472,8 +517,17 @@ nav.scrolled {
   border: 1px solid rgba(191,154,66,0.22);
   padding: 0.2rem 0.5rem; border-radius: 1px;
 }
-.s-desc { font-size: 0.82rem; color: var(--stone); line-height: 1.8; font-weight: 400; }
-.s-arrow { font-size: 1rem; color: var(--slate); text-align: right; transition: transform 0.3s var(--ease-out), color 0.2s; }
+
+.s-desc {
+  font-size: 0.82rem; color: var(--stone);
+  line-height: 1.8; font-weight: 400;
+}
+
+.s-arrow {
+  font-size: 1rem; color: var(--slate);
+  text-align: right;
+  transition: transform 0.3s var(--ease-out), color 0.2s;
+}
 .s-row:hover .s-arrow { transform: translateX(6px); color: var(--gold); }
 
 /* ══ RECORD ══ */
@@ -484,9 +538,12 @@ nav.scrolled {
   border-bottom: 1px solid var(--gold-line);
   position: relative; overflow: hidden;
 }
+/* large watermark */
 .record-wm {
   position: absolute;
-  right: -2%; top: 50%; transform: translateY(-50%);
+  right: -2%;
+  top: 50%;
+  transform: translateY(-50%);
   font-family: var(--display);
   font-size: 22vw; font-weight: 600; font-style: italic;
   color: rgba(191,154,66,0.025);
@@ -496,13 +553,16 @@ nav.scrolled {
 .record-in {
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
-  min-height: 420px;
+  min-height: 560px;
   max-width: var(--max);
   margin: 0 auto;
   position: relative; z-index: 2;
 }
 .record-sep { background: var(--gold-line); }
-.record-left { padding: 3.5rem var(--pad) 3.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+.record-left {
+  padding: 5.5rem var(--pad) 5.5rem;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
 .record-badge {
   display: inline-flex; align-items: center; gap: 0.6rem;
   font-size: 0.58rem; font-weight: 700;
@@ -512,7 +572,11 @@ nav.scrolled {
   padding: 0.4rem 0.85rem; border-radius: 2px;
   margin-bottom: 2.5rem; width: fit-content;
 }
-.record-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; animation: pulse 2s ease-in-out infinite; }
+.record-badge-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
 .record-verdict {
   font-family: var(--display);
   font-size: clamp(4.5rem, 8vw, 7.5rem);
@@ -520,12 +584,37 @@ nav.scrolled {
   color: var(--gold); line-height: 0.9;
   letter-spacing: -0.03em; display: block;
 }
-.record-ruling { font-family: var(--display); font-size: 1.05rem; font-weight: 300; color: var(--stone); margin-top: 1.2rem; letter-spacing: 0.03em; }
-.record-meta { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; padding-top: 2.5rem; border-top: 1px solid var(--gold-line); }
-.rm-l { font-size: 0.56rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.3rem; }
-.rm-v { font-size: 0.84rem; font-weight: 400; color: var(--ivory); }
-.rm-v.mono { font-family: var(--mono); font-size: 0.75rem; color: var(--gold-hi); }
-.record-right { padding: 5.5rem 5.5rem 5.5rem var(--pad); display: flex; flex-direction: column; justify-content: center; gap: 3rem; }
+.record-ruling {
+  font-family: var(--display);
+  font-size: 1.05rem; font-weight: 300;
+  color: var(--stone); margin-top: 1.2rem;
+  letter-spacing: 0.03em;
+}
+.record-meta {
+  margin-top: 3rem;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--gold-line);
+}
+.rm-l {
+  font-size: 0.56rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--slate); margin-bottom: 0.3rem;
+}
+.rm-v {
+  font-size: 0.84rem; font-weight: 400; color: var(--ivory);
+}
+.rm-v.mono {
+  font-family: var(--mono); font-size: 0.75rem;
+  color: var(--gold-hi);
+}
+
+.record-right {
+  padding: 5.5rem 5.5rem 5.5rem var(--pad);
+  display: flex; flex-direction: column;
+  justify-content: center; gap: 3rem;
+}
 blockquote.verdict-q {
   font-family: var(--display);
   font-size: 1.18rem; font-style: italic;
@@ -534,14 +623,29 @@ blockquote.verdict-q {
   padding-left: 2rem;
 }
 .expertise-block {}
-.exp-title { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+.exp-title {
+  font-size: 0.58rem; font-weight: 700;
+  letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.2rem;
+}
 .exp-list { display: flex; flex-direction: column; gap: 0.6rem; }
-.exp-item { display: flex; align-items: center; gap: 1rem; font-size: 0.82rem; color: var(--stone); font-weight: 400; }
-.exp-item::before { content: ''; display: block; width: 20px; height: 1px; background: var(--gold-lo); flex-shrink: 0; }
+.exp-item {
+  display: flex; align-items: center; gap: 1rem;
+  font-size: 0.82rem; color: var(--stone); font-weight: 400;
+}
+.exp-item::before {
+  content: '';
+  display: block; width: 20px; height: 1px;
+  background: var(--gold-lo); flex-shrink: 0;
+}
 
 /* ══ ABOUT ══ */
 .about { padding: 8rem 0; }
-.about-grid { display: grid; grid-template-columns: 300px 1fr; gap: 7rem; align-items: start; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 7rem; align-items: start;
+}
 .about-l {}
 .about-name {
   font-family: var(--display);
@@ -550,7 +654,11 @@ blockquote.verdict-q {
   line-height: 1.05; letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
 }
-.about-role { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; display: block; }
+.about-role {
+  font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 2rem; display: block;
+}
 .about-img {
   width: 100%; aspect-ratio: 3/4;
   background: var(--surface);
@@ -559,212 +667,261 @@ blockquote.verdict-q {
   display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden;
 }
-.about-img::before { content: ''; position: absolute; inset:0; background: linear-gradient(145deg, rgba(191,154,66,0.07) 0%, transparent 55%); }
-.about-img-ico { text-align: center; color: var(--slate); position: relative; z-index: 1; }
+.about-img::before {
+  content: '';
+  position: absolute; inset:0;
+  background: linear-gradient(145deg, rgba(191,154,66,0.07) 0%, transparent 55%);
+}
+.about-img-ico {
+  text-align: center; color: var(--slate);
+  position: relative; z-index: 1;
+}
 .about-img-ico svg { width: 56px; height: 56px; opacity: 0.2; display: block; margin: 0 auto 0.6rem; }
 .about-img-ico span { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.5; }
+
 .about-r {}
-.about-nums { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin-bottom: 3.5rem; border: 1px solid var(--gold-line); border-radius: var(--r); overflow: hidden; }
-.a-num { padding: 1.5rem 1.4rem; background: var(--deep); border-right: 1px solid var(--gold-line); }
+.about-nums {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 0; margin-bottom: 3.5rem;
+  border: 1px solid var(--gold-line);
+  border-radius: var(--r); overflow: hidden;
+}
+.a-num {
+  padding: 1.5rem 1.4rem; background: var(--deep);
+  border-right: 1px solid var(--gold-line);
+}
 .a-num:last-child { border-right: none; }
-.a-num-n { font-family: var(--display); font-size: 2.2rem; font-weight: 300; color: var(--gold); line-height: 1; display: block; }
-.a-num-l { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); display: block; margin-top: 0.3rem; line-height: 1.35; }
-.about-bio { columns: 2; column-gap: 3rem; margin-bottom: 3rem; }
-.about-bio p { font-size: 0.87rem; color: var(--stone); line-height: 1.92; font-weight: 400; margin-bottom: 1.2rem; break-inside: avoid; }
+.a-num-n {
+  font-family: var(--display);
+  font-size: 2.2rem; font-weight: 300;
+  color: var(--gold); line-height: 1; display: block;
+}
+.a-num-l {
+  font-size: 0.58rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--slate); display: block; margin-top: 0.3rem; line-height: 1.35;
+}
+.about-bio {
+  columns: 2; column-gap: 3rem; margin-bottom: 3rem;
+}
+.about-bio p {
+  font-size: 0.87rem; color: var(--stone);
+  line-height: 1.92; font-weight: 400;
+  margin-bottom: 1.2rem; break-inside: avoid;
+}
 .about-bio strong { color: var(--ivory); font-weight: 600; }
 .about-bio p:last-child { margin-bottom: 0; }
-.about-actions { display: flex; gap: 1rem; flex-wrap: wrap; padding-top: 2rem; border-top: 1px solid var(--gold-line); }
+.about-actions {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gold-line);
+}
 
 /* ══ METHODOLOGY ══ */
-.method { background: var(--deep); border-top: 1px solid var(--gold-line); }
-.method-in { display: grid; grid-template-columns: 320px 1fr; max-width: var(--max); margin: 0 auto; }
-.method-l { padding: 5.5rem var(--pad) 5.5rem; border-right: 1px solid var(--gold-line); display: flex; flex-direction: column; justify-content: space-between; }
-.method-title { font-family: var(--display); font-size: 2.4rem; font-weight: 300; color: var(--ivory); line-height: 1.1; letter-spacing: -0.01em; }
+.method {
+  background: var(--deep);
+  border-top: 1px solid var(--gold-line);
+}
+.method-in {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.method-l {
+  padding: 5.5rem var(--pad) 5.5rem;
+  border-right: 1px solid var(--gold-line);
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.method-title {
+  font-family: var(--display);
+  font-size: 2.4rem; font-weight: 300;
+  color: var(--ivory); line-height: 1.1;
+  letter-spacing: -0.01em;
+}
 .method-title em { font-style: italic; color: var(--gold); }
-.method-tagline { font-size: 0.78rem; color: var(--stone); line-height: 1.8; max-width: 260px; }
-.method-r { display: grid; grid-template-columns: 1fr 1fr 1fr; }
-    .method-item { padding: 5.5rem 2.5rem; border-right: 1px solid var(--gold-line); position: relative; }
-    .method-item:last-child { border-right: none; }
-    .method-n { font-family: var(--display); font-size: 5rem; font-weight: 300; color: rgba(191,154,66,0.1); line-height: 1; letter-spacing: -0.04em; margin-bottom: 2rem; }
-    .method-h { font-family: var(--display); font-size: 1.2rem; font-weight: 500; color: var(--ivory); margin-bottom: 0.8rem; line-height: 1.2; }
-    .method-p { font-size: 0.8rem; color: var(--stone); line-height: 1.82; font-weight: 400; margin: 0; }
+.method-tagline {
+  font-size: 0.78rem; color: var(--stone);
+  line-height: 1.8; max-width: 260px;
+}
+.method-r {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+}
+.method-item {
+  padding: 5.5rem 2.5rem;
+  border-right: 1px solid var(--gold-line);
+  position: relative;
+}
+.method-item:last-child { border-right: none; }
+.method-n {
+  font-family: var(--display);
+  font-size: 5rem; font-weight: 300;
+  color: rgba(191,154,66,0.1); line-height: 1;
+  letter-spacing: -0.04em; margin-bottom: 2rem;
+}
+.method-h {
+  font-family: var(--display);
+  font-size: 1.2rem; font-weight: 500;
+  color: var(--ivory); margin-bottom: 0.8rem; line-height: 1.2;
+}
+.method-p {
+  font-size: 0.8rem; color: var(--stone);
+  line-height: 1.82; font-weight: 400;
+}
 
-  /* ══ CTA STRIP ══ */
-  .cta-strip {
-    padding: 6rem 0;
-    border-top: 1px solid var(--gold-line);
-    position: relative; overflow: hidden;
-  }
-  .cta-strip::before {
-    content: '';
-    position: absolute; inset:0;
-    background: radial-gradient(ellipse 50% 100% at 100% 50%, rgba(191,154,66,0.05) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .cta-inner {
-    display: flex; align-items: center;
-    justify-content: space-between; gap: 4rem; flex-wrap: wrap;
-    position: relative; z-index: 2;
-  }
-  .cta-copy {}
-  .cta-h {
-    font-family: var(--display);
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 300; color: var(--ivory);
-    line-height: 1.1; letter-spacing: -0.01em;
-    max-width: 500px;
-  }
-  .cta-h em { font-style: italic; color: var(--gold); }
-  .cta-sub { font-size: 0.84rem; color: var(--stone); margin-top: 0.8rem; font-weight: 400; }
-  .cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+/* ══ CTA STRIP ══ */
+.cta-strip {
+  padding: 6rem 0;
+  border-top: 1px solid var(--gold-line);
+  position: relative; overflow: hidden;
+}
+.cta-strip::before {
+  content: '';
+  position: absolute; inset:0;
+  background: radial-gradient(ellipse 50% 100% at 100% 50%, rgba(191,154,66,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-inner {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 4rem; flex-wrap: wrap;
+  position: relative; z-index: 2;
+}
+.cta-copy {}
+.cta-h {
+  font-family: var(--display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300; color: var(--ivory);
+  line-height: 1.1; letter-spacing: -0.01em;
+  max-width: 500px;
+}
+.cta-h em { font-style: italic; color: var(--gold); }
+.cta-sub {
+  font-size: 0.84rem; color: var(--stone);
+  margin-top: 0.8rem; font-weight: 400;
+}
+.cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 
-  /* ══ FOOTER ══ */
-  footer {
-    background: var(--void);
-    border-top: 1px solid var(--gold-line);
-  }
-  .footer-top {
-    max-width: var(--max); margin: 0 auto;
-    padding: 3.5rem var(--pad);
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center; gap: 2rem;
-  }
-  .footer-logo {
-    font-family: var(--ui); font-size: 0.68rem;
-    font-weight: 800; letter-spacing: 0.24em;
-    text-transform: uppercase; color: var(--ivory);
-    text-decoration: none;
-  }
-  .footer-logo em { font-style: normal; color: var(--gold); }
-  .footer-contact {
-    font-size: 0.78rem; color: var(--stone);
-    text-decoration: none; text-align: center;
-    transition: color 0.2s;
-  }
-  .footer-contact:hover { color: var(--gold); }
-  .footer-r {
-    text-align: right; font-size: 0.62rem;
-    color: var(--slate); letter-spacing: 0.05em;
-  }
-  .footer-disc {
-    max-width: var(--max); margin: 0 auto;
-    padding: 1.2rem var(--pad) 2.5rem;
-    border-top: 1px solid var(--gold-line);
-    font-size: 0.64rem; color: var(--slate);
-    line-height: 1.75;
-  }
+/* ══ FOOTER ══ */
+footer {
+  background: var(--void);
+  border-top: 1px solid var(--gold-line);
+}
+.footer-top {
+  max-width: var(--max); margin: 0 auto;
+  padding: 3.5rem var(--pad);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center; gap: 2rem;
+}
+.footer-logo {
+  font-family: var(--ui); font-size: 0.68rem;
+  font-weight: 800; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--ivory);
+  text-decoration: none;
+}
+.footer-logo em { font-style: normal; color: var(--gold); }
+.footer-contact {
+  font-size: 0.78rem; color: var(--stone);
+  text-decoration: none; text-align: center;
+  transition: color 0.2s;
+}
+.footer-contact:hover { color: var(--gold); }
+.footer-r {
+  text-align: right; font-size: 0.62rem;
+  color: var(--slate); letter-spacing: 0.05em;
+}
+.footer-disc {
+  max-width: var(--max); margin: 0 auto;
+  padding: 1.2rem var(--pad) 2.5rem;
+  border-top: 1px solid var(--gold-line);
+  font-size: 0.64rem; color: var(--slate);
+  line-height: 1.75;
+}
 
-  /* ══ ANIMATIONS ══ */
-  @keyframes fadeSlideUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes roll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-  @keyframes scrollPulse {
-    0%, 100% { opacity: 0.3; transform: scaleY(0.8); transform-origin: top; }
-    50%       { opacity: 1;   transform: scaleY(1); }
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50%       { opacity: 0.5; transform: scale(0.8); }
-  }
+/* ══ ANIMATIONS ══ */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes roll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.8); transform-origin: top; }
+  50%       { opacity: 1;   transform: scaleY(1); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
 
-  /* Scroll reveal */
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-d1 { transition-delay: 0.1s; }
-  .reveal-d2 { transition-delay: 0.2s; }
-  .reveal-d3 { transition-delay: 0.3s; }
-  .reveal-d4 { transition-delay: 0.4s; }
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+.reveal-d4 { transition-delay: 0.4s; }
 
-  /* ══ RESPONSIVE (OPTIMIZED) ══ */
-  @media (max-width: 1024px) {
-    :root { --pad: 2.5rem; }
-    .hero-main { grid-template-columns: 1fr; gap: 3rem; }
-    .hero-h1 { font-size: clamp(3rem, 7vw, 5rem); }
-    .hero-right { padding-bottom: 0; }
-    .practice-head { grid-template-columns: 1fr; gap: 2rem; }
-    .s-row-in { grid-template-columns: 56px 220px 1fr 40px; padding: 2rem var(--pad); }
-    .record-in { grid-template-columns: 1fr; }
-    .record-sep { display: none; }
-    .record-left { padding: 4rem var(--pad) 3rem; }
-    .record-right { padding: 2rem var(--pad) 4rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .about-bio { columns: 1; }
-    .about-nums { grid-template-columns: repeat(3,1fr); }
-    .method-in { grid-template-columns: 1fr; }
-    .method-l { border-right: none; border-bottom: 1px solid var(--gold-line); padding: 4rem var(--pad); }
-    .method-r { grid-template-columns: 1fr 1fr; }
-    .method-item:nth-child(2) { border-right: none; }
-    .footer-top { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
-    .footer-r { text-align: center; }
-  }
+/* ══ RESPONSIVE ══ */
+@media (max-width: 1024px) {
+  :root { --pad: 2.5rem; }
+  .hero-main { grid-template-columns: 1fr; gap: 3rem; }
+  .hero-h1 { font-size: clamp(3rem, 7vw, 5rem); }
+  .hero-right { padding-bottom: 0; }
+  .practice-head { grid-template-columns: 1fr; gap: 2rem; }
+  .s-row-in { grid-template-columns: 56px 220px 1fr 40px; padding: 2rem var(--pad); }
+  .record-in { grid-template-columns: 1fr; }
+  .record-sep { display: none; }
+  .record-left { padding: 4rem var(--pad) 3rem; }
+  .record-right { padding: 2rem var(--pad) 4rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-bio { columns: 1; }
+  .about-nums { grid-template-columns: repeat(3,1fr); }
+  .method-in { grid-template-columns: 1fr; }
+  .method-l { border-right: none; border-bottom: 1px solid var(--gold-line); padding: 4rem var(--pad); }
+  .method-r { grid-template-columns: 1fr 1fr; }
+  .method-item:nth-child(2) { border-right: none; }
+  .footer-top { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
+  .footer-r { text-align: center; }
+}
+@media (max-width: 768px) {
+  :root { --pad: 1.5rem; }
+  .nav-menu { display: none; }
+  .nav-burger { display: flex; }
+  .hero-foot { flex-direction: column; align-items: flex-start; gap: 2rem; }
+  .hero-stats { gap: 2rem; }
+  .hero-scroll { display: none; }
+  .s-row-in { grid-template-columns: 42px 1fr 32px; }
+  .s-desc { display: none; }
+  .record-meta { grid-template-columns: 1fr; }
+  .method-r { grid-template-columns: 1fr; }
+  .method-item { border-right: none; border-bottom: 1px solid var(--gold-line); padding: 3rem var(--pad); }
+  .method-item:last-child { border-bottom: none; }
+  .cta-inner { flex-direction: column; align-items: flex-start; }
+  .about-nums { grid-template-columns: 1fr; }
+  .a-num { border-right: none; border-bottom: 1px solid var(--gold-line); }
+  .a-num:last-child { border-bottom: none; }
+  body { cursor: auto; }
+  #cur, #cur-r { display: none; }
+  a, button { cursor: pointer !important; }
+}
 
-  @media (max-width: 768px) {
-    :root { --pad: 1.5rem; }
-    
-    /* Nav */
-    .nav-menu { display: none; }
-    .nav-burger { display: flex; }
-    
-    /* Hero */
-    .hero-foot { flex-direction: column; align-items: flex-start; gap: 2rem; }
-    .hero-stats { gap: 2rem; flex-wrap: wrap; }
-    .hero-scroll { display: none; }
-    .hero-h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
-    .hero-sub { font-size: 0.85rem; max-width: 100%; padding-left: 0; border-left: none; }
-    
-    /* Practice */
-    .s-row-in { grid-template-columns: 42px 1fr 32px; padding: 1.5rem var(--pad); }
-    .s-desc { display: none; }
-    .s-name { font-size: 1.1rem; }
-    
-    /* Record */
-    .record-meta { grid-template-columns: 1fr; }
-    .record-verdict { font-size: 3.5rem; }
-    
-    /* Methodology */
-    .method-r { grid-template-columns: 1fr; }
-    .method-item { border-right: none; border-bottom: 1px solid var(--gold-line); padding: 3rem var(--pad); }
-    .method-item:last-child { border-bottom: none; }
-    .method-n { font-size: 3rem; }
-    
-    /* CTA */
-    .cta-inner { flex-direction: column; align-items: flex-start; }
-    .cta-h { font-size: 2rem; }
-    
-    /* About */
-    .about-nums { grid-template-columns: 1fr; }
-    .a-num { border-right: none; border-bottom: 1px solid var(--gold-line); }
-    .a-num:last-child { border-bottom: none; }
-    
-    /* Cursor & Touch */
-    body { cursor: auto; }
-    #cur, #cur-r { display: none; }
-    a, button { cursor: pointer !important; }
-    
-    /* Ticker Mobile Fix */
-    .ticker-track-inner { animation-duration: 45s; } /* Slower for mobile */
+/* Accessibility: respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
-
-  /* Accessibility */
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after {
-      animation-duration: 0.001ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.001ms !important;
-    }
-    .ticker-track-inner { animation: none !important; }
-  }
+  .ticker-track { animation: none !important; }
+}
 
 </style>
 </head>
@@ -798,17 +955,24 @@ blockquote.verdict-q {
 
 <!-- ══════════ HERO ══════════ -->
 <div class="hero">
+
+  <!-- Geometric SVG grid -->
   <div class="hero-geo">
     <svg viewBox="0 0 1440 900" fill="none" preserveAspectRatio="xMidYMid slice">
+      <!-- Horizontal lines -->
       <line x1="0" y1="225" x2="1440" y2="225" stroke="#BF9A42" stroke-width="0.5" stroke-opacity="0.12"/>
       <line x1="0" y1="450" x2="1440" y2="450" stroke="#BF9A42" stroke-width="0.5" stroke-opacity="0.08"/>
       <line x1="0" y1="675" x2="1440" y2="675" stroke="#BF9A42" stroke-width="0.5" stroke-opacity="0.12"/>
+      <!-- Vertical lines -->
       <line x1="360" y1="0" x2="360" y2="900" stroke="#BF9A42" stroke-width="0.5" stroke-opacity="0.08"/>
       <line x1="720" y1="0" x2="720" y2="900" stroke="#BF9A42" stroke-width="0.5" stroke-opacity="0.12"/>
       <line x1="1080" y1="0" x2="1080" y2="900" stroke="#BF9A42" stroke-width="0.5" stroke-opacity="0.08"/>
+      <!-- Diagonal accent -->
       <line x1="900" y1="0" x2="1440" y2="540" stroke="#BF9A42" stroke-width="0.8" stroke-opacity="0.1"/>
+      <!-- Arc / circle element -->
       <circle cx="1200" cy="150" r="180" stroke="#BF9A42" stroke-width="0.6" stroke-opacity="0.07" fill="none"/>
       <circle cx="1200" cy="150" r="90" stroke="#BF9A42" stroke-width="0.4" stroke-opacity="0.05" fill="none"/>
+      <!-- Small cross marks -->
       <g stroke="#BF9A42" stroke-width="0.6" stroke-opacity="0.25">
         <line x1="357" y1="222" x2="363" y2="228"/><line x1="363" y1="222" x2="357" y2="228"/>
         <line x1="717" y1="447" x2="723" y2="453"/><line x1="723" y1="447" x2="717" y2="453"/>
@@ -879,15 +1043,58 @@ blockquote.verdict-q {
   </div>
 </div>
 
-<!-- ══════════ TICKER (FIXED) ══════════ -->
+<!-- ══════════ TICKER ══════════ -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track" id="tickerTrack">
-    <div class="ticker-track-inner" id="tickerInner">
-      <!-- COPY 1 -->
-      <span class="t-item hi">FIFA Football Tribunal</span><span class="t-item">·</span><span class="t-item">CAS Arbitration</span><span class="t-item">·</span><span class="t-item hi">FFAR Compliance</span><span class="t-item">·</span><span class="t-item">Article 17 RSTP</span><span class="t-item">·</span><span class="t-item hi">Diarra Ruling</span><span class="t-item">·</span><span class="t-item">Training Compensation</span><span class="t-item">·</span><span class="t-item hi">DRC Proceedings</span><span class="t-item">·</span><span class="t-item">Solidarity Mechanism</span><span class="t-item">·</span><span class="t-item hi">Contract Stability</span><span class="t-item">·</span><span class="t-item">Lex Sportiva</span><span class="t-item">·</span><span class="t-item hi">Cross-Border Disputes</span><span class="t-item">·</span><span class="t-item">Player Status</span><span class="t-item">·</span>
-      <!-- COPY 2 (Exact Duplicate) -->
-      <span class="t-item hi">FIFA Football Tribunal</span><span class="t-item">·</span><span class="t-item">CAS Arbitration</span><span class="t-item">·</span><span class="t-item hi">FFAR Compliance</span><span class="t-item">·</span><span class="t-item">Article 17 RSTP</span><span class="t-item">·</span><span class="t-item hi">Diarra Ruling</span><span class="t-item">·</span><span class="t-item">Training Compensation</span><span class="t-item">·</span><span class="t-item hi">DRC Proceedings</span><span class="t-item">·</span><span class="t-item">Solidarity Mechanism</span><span class="t-item">·</span><span class="t-item hi">Contract Stability</span><span class="t-item">·</span><span class="t-item">Lex Sportiva</span><span class="t-item">·</span><span class="t-item hi">Cross-Border Disputes</span><span class="t-item">·</span><span class="t-item">Player Status</span><span class="t-item">·</span>
-    </div>
+    <span class="t-item hi">FIFA Football Tribunal</span>
+    <span class="t-item">·</span>
+    <span class="t-item">CAS Arbitration</span>
+    <span class="t-item">·</span>
+    <span class="t-item hi">FFAR Compliance</span>
+    <span class="t-item">·</span>
+    <span class="t-item">Article 17 RSTP</span>
+    <span class="t-item">·</span>
+    <span class="t-item hi">Diarra Ruling</span>
+    <span class="t-item">·</span>
+    <span class="t-item">Training Compensation</span>
+    <span class="t-item">·</span>
+    <span class="t-item hi">DRC Proceedings</span>
+    <span class="t-item">·</span>
+    <span class="t-item">Solidarity Mechanism</span>
+    <span class="t-item">·</span>
+    <span class="t-item hi">Contract Stability</span>
+    <span class="t-item">·</span>
+    <span class="t-item">Lex Sportiva</span>
+    <span class="t-item">·</span>
+    <span class="t-item hi">Cross-Border Disputes</span>
+    <span class="t-item">·</span>
+    <span class="t-item">Player Status</span>
+    <span class="t-item">·</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="t-item hi">FIFA Football Tribunal</span>
+    <span class="t-item">·</span>
+    <span class="t-item">CAS Arbitration</span>
+    <span class="t-item">·</span>
+    <span class="t-item hi">FFAR Compliance</span>
+    <span class="t-item">·</span>
+    <span class="t-item">Article 17 RSTP</span>
+    <span class="t-item">·</span>
+    <span class="t-item hi">Diarra Ruling</span>
+    <span class="t-item">·</span>
+    <span class="t-item">Training Compensation</span>
+    <span class="t-item">·</span>
+    <span class="t-item hi">DRC Proceedings</span>
+    <span class="t-item">·</span>
+    <span class="t-item">Solidarity Mechanism</span>
+    <span class="t-item">·</span>
+    <span class="t-item hi">Contract Stability</span>
+    <span class="t-item">·</span>
+    <span class="t-item">Lex Sportiva</span>
+    <span class="t-item">·</span>
+    <span class="t-item hi">Cross-Border Disputes</span>
+    <span class="t-item">·</span>
+    <span class="t-item">Player Status</span>
+    <span class="t-item">·</span>
   </div>
 </div>
 
@@ -912,7 +1119,11 @@ blockquote.verdict-q {
         <div class="s-n">01</div>
         <div class="s-name-col">
           <div class="s-name">FIFA Football Tribunal</div>
-          <div class="s-chips"><span class="chip">DRC</span><span class="chip">Players' Status</span><span class="chip">Enforcement</span></div>
+          <div class="s-chips">
+            <span class="chip">DRC</span>
+            <span class="chip">Players' Status</span>
+            <span class="chip">Enforcement</span>
+          </div>
         </div>
         <p class="s-desc">Full representation before the FIFA Football Tribunal and Dispute Resolution Chamber — player contract disputes, training compensation, solidarity mechanism claims, from first submission through to enforcement of the award internationally.</p>
         <div class="s-arrow">→</div>
@@ -924,7 +1135,11 @@ blockquote.verdict-q {
         <div class="s-n">02</div>
         <div class="s-name-col">
           <div class="s-name">FFAR Compliance &amp; Agent Law</div>
-          <div class="s-chips"><span class="chip">FFAR 2023</span><span class="chip">Cap Compliance</span><span class="chip">Disciplinary</span></div>
+          <div class="s-chips">
+            <span class="chip">FFAR 2023</span>
+            <span class="chip">Cap Compliance</span>
+            <span class="chip">Disciplinary</span>
+          </div>
         </div>
         <p class="s-desc">End-to-end advisory for FIFA-licensed football intermediaries under the 2023 Football Agent Regulations — compliance structuring, representation agreement drafting, multi-jurisdictional registration, and disciplinary defence.</p>
         <div class="s-arrow">→</div>
@@ -936,7 +1151,11 @@ blockquote.verdict-q {
         <div class="s-n">03</div>
         <div class="s-name-col">
           <div class="s-name">Article 17 RSTP Disputes</div>
-          <div class="s-chips"><span class="chip">Art. 17 RSTP</span><span class="chip">Post-Diarra</span><span class="chip">Just Cause</span></div>
+          <div class="s-chips">
+            <span class="chip">Art. 17 RSTP</span>
+            <span class="chip">Post-Diarra</span>
+            <span class="chip">Just Cause</span>
+          </div>
         </div>
         <p class="s-desc">Deep specialisation in contract termination disputes under Article 17 RSTP — just cause, sporting just cause, unilateral termination, financial liability — with continuous monitoring of CJEU proceedings that are reshaping the entire framework.</p>
         <div class="s-arrow">→</div>
@@ -948,7 +1167,11 @@ blockquote.verdict-q {
         <div class="s-n">04</div>
         <div class="s-name-col">
           <div class="s-name">Contracts &amp; Cross-Border Disputes</div>
-          <div class="s-chips"><span class="chip">Contracts</span><span class="chip">Transfers</span><span class="chip">Image Rights</span></div>
+          <div class="s-chips">
+            <span class="chip">Contracts</span>
+            <span class="chip">Transfers</span>
+            <span class="chip">Image Rights</span>
+          </div>
         </div>
         <p class="s-desc">Drafting and review of player employment contracts, agent representation agreements, image rights licences, and transfer documentation — alongside strategic advice where domestic employment law intersects with FIFA's regulatory framework.</p>
         <div class="s-arrow">→</div>
@@ -971,13 +1194,27 @@ blockquote.verdict-q {
         <p class="record-ruling">FIFA Football Tribunal · Cross-border · Slovakia</p>
       </div>
       <div class="record-meta">
-        <div><div class="rm-l">Case Reference</div><div class="rm-v mono">FPSD-20481</div></div>
-        <div><div class="rm-l">Forum</div><div class="rm-v">FIFA Football Tribunal</div></div>
-        <div><div class="rm-l">Parties</div><div class="rm-v">Abuladze v FK Humenné</div></div>
-        <div><div class="rm-l">Outcome</div><div class="rm-v">Successful — Claimant</div></div>
+        <div>
+          <div class="rm-l">Case Reference</div>
+          <div class="rm-v mono">FPSD-20481</div>
+        </div>
+        <div>
+          <div class="rm-l">Forum</div>
+          <div class="rm-v">FIFA Football Tribunal</div>
+        </div>
+        <div>
+          <div class="rm-l">Parties</div>
+          <div class="rm-v">Abuladze v FK Humenné</div>
+        </div>
+        <div>
+          <div class="rm-l">Outcome</div>
+          <div class="rm-v">Successful — Claimant</div>
+        </div>
       </div>
     </div>
+
     <div class="record-sep"></div>
+
     <div class="record-right reveal reveal-d2">
       <blockquote class="verdict-q">
         "Cross-border FIFA proceedings demand not just knowledge of the regulations, but an instinct for how the Tribunal reasons. Every submission is a strategic act — not an administrative formality."
@@ -1015,18 +1252,30 @@ blockquote.verdict-q {
           </div>
         </div>
       </div>
+
       <div class="about-r reveal reveal-d2">
         <div class="about-nums">
-          <div class="a-num"><span class="a-num-n">1+</span><span class="a-num-l">Years independent<br>practice</span></div>
-          <div class="a-num"><span class="a-num-n">FIFA</span><span class="a-num-l">Tribunal mandate<br>won</span></div>
-          <div class="a-num"><span class="a-num-n">EU/EEA</span><span class="a-num-l">Cross-border<br>experience</span></div>
+          <div class="a-num">
+            <span class="a-num-n">1+</span>
+            <span class="a-num-l">Years independent<br>practice</span>
+          </div>
+          <div class="a-num">
+            <span class="a-num-n">FIFA</span>
+            <span class="a-num-l">Tribunal mandate<br>won</span>
+          </div>
+          <div class="a-num">
+            <span class="a-num-n">EU/EEA</span>
+            <span class="a-num-l">Cross-border<br>experience</span>
+          </div>
         </div>
+
         <div class="about-bio">
           <p>Dachi Peradze is an <strong>international sports lawyer</strong> based in Tbilisi, Georgia, practising under dachiperadze.com. His work is concentrated exclusively at the intersection of FIFA regulatory frameworks, CAS arbitration procedure, and the commercial realities of cross-border football.</p>
           <p>Before establishing an independent practice, Dachi trained in a law firm environment and developed specialist fluency in <strong>FFAR compliance</strong>, <strong>FIFA Tribunal proceedings</strong>, and Article 17 RSTP disputes. That regulatory focus now defines everything the practice does — there is no generalist work, no approximation.</p>
           <p>His <strong>ongoing PhD research on Article 17 RSTP</strong> and contractual stability keeps his advisory work at the frontier of this fast-moving field. He maintains active real-time monitoring of CJEU proceedings C-209/23 and C-428/23 — the cases that will determine the future validity of FFAR itself.</p>
           <p>Dachi represents clients directly — <strong>agencies and clubs across Eastern and Western Europe</strong> — with the responsiveness of a boutique and the depth of a specialist. When you instruct this practice, the lawyer who assesses your case is the lawyer who handles it.</p>
         </div>
+
         <div class="about-actions">
           <a class="btn-gold" href="pricing.html">Services &amp; Fees →</a>
           <a class="btn-ghost" href="mailto:legal@dachiperadze.com">legal@dachiperadze.com</a>
@@ -1100,51 +1349,26 @@ blockquote.verdict-q {
 const cur = document.getElementById('cur');
 const curR = document.getElementById('cur-r');
 let mx = 0, my = 0, rx = window.innerWidth/2, ry = window.innerHeight/2;
-
-if (!('ontouchstart' in window)) {
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-  function loopCursor() {
-    cur.style.left = mx + 'px'; cur.style.top = my + 'px';
-    rx += (mx - rx) * 0.13; ry += (my - ry) * 0.13;
-    curR.style.left = rx + 'px'; curR.style.top = ry + 'px';
-    requestAnimationFrame(loopCursor);
-  }
-  loopCursor();
-  document.querySelectorAll('a,button').forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-  });
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+function loopCursor() {
+  cur.style.left = mx + 'px'; cur.style.top = my + 'px';
+  rx += (mx - rx) * 0.13; ry += (my - ry) * 0.13;
+  curR.style.left = rx + 'px'; curR.style.top = ry + 'px';
+  requestAnimationFrame(loopCursor);
 }
+loopCursor();
+document.querySelectorAll('a,button').forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+});
 
 /* ── PROGRESS BAR ── */
 const pg = document.getElementById('pg');
-
-function updateProgressBar() {
-  const scrollHeight = Math.max(
-    document.body.scrollHeight, 
-    document.documentElement.scrollHeight,
-    document.body.offsetHeight, 
-    document.documentElement.offsetHeight,
-    document.body.clientHeight, 
-    document.documentElement.clientHeight
-  );
-  const scrollTop = window.scrollY || window.pageYOffset;
-  const windowHeight = window.innerHeight;
-  const scrollableDistance = scrollHeight - windowHeight;
-
-  if (scrollableDistance <= 0) {
-    pg.style.width = '0%';
-    return;
-  }
-
-  const pct = (scrollTop / scrollableDistance) * 100;
-  const clampedPct = Math.min(Math.max(pct, 0), 100);
-  pg.style.width = clampedPct + '%';
-}
-
-window.addEventListener('scroll', updateProgressBar, { passive: true });
-window.addEventListener('load', updateProgressBar);
-window.addEventListener('resize', updateProgressBar);
+window.addEventListener('scroll', () => {
+  const scrollable = document.body.scrollHeight - window.innerHeight;
+  const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  pg.style.width = pct + '%';
+}, { passive: true });
 
 /* ── NAV SCROLL ── */
 const nav = document.getElementById('nav');
@@ -1169,87 +1393,9 @@ drawer.querySelectorAll('a').forEach(a => {
 /* ── SCROLL REVEAL ── */
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { 
-    if (e.isIntersecting) { 
-      e.target.classList.add('visible'); 
-      observer.unobserve(e.target); 
-    } 
-  });
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
 }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 reveals.forEach(el => observer.observe(el));
-
-/* ── TICKER FORCE START ── */
-// This forces the animation to restart cleanly on load
-window.addEventListener('load', () => {
-  const inner = document.getElementById('tickerInner');
-  if (inner) {
-    inner.style.animation = 'none';
-    inner.offsetHeight; /* Trigger reflow */
-    inner.style.animation = 'roll 30s linear infinite';
-  }
-});
-
-/* ── TICKER: ensure continuous copy fill ── */
-function ensureTickerFill() {
-  const inner = document.getElementById('tickerInner');
-  if (!inner) return;
-
-  // If the track's content isn't wide enough for a seamless loop,
-  // duplicate the child items (not the track element) until the scrollWidth is at least twice the viewport.
-  const minWidth = window.innerWidth * 2;
-  let attempts = 0;
-  const originalChildren = Array.from(inner.children);
-  while (inner.scrollWidth < minWidth && attempts < 10) {
-    originalChildren.forEach(child => inner.appendChild(child.cloneNode(true)));
-    attempts++;
-  }
-}
-
-window.addEventListener('load', () => {
-  ensureTickerFill();
-});
-window.addEventListener('resize', () => {
-  // small debounce
-  clearTimeout(window._tickerResize);
-  window._tickerResize = setTimeout(ensureTickerFill, 150);
-});
-
-/* ── TICKER FALLBACK ANIMATION (rAF) ── */
-function startTickerRAF() {
-  const inner = document.getElementById('tickerInner');
-  if (!inner) return;
-  // Respect reduced-motion
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  let px = 0;
-  const speed = 60; // px per second
-  let last = performance.now();
-
-  function step(now) {
-    const dt = (now - last) / 1000;
-    last = now;
-    px += speed * dt;
-    // when px exceeds half the inner width (we duplicate content), wrap
-    const wrapAt = inner.scrollWidth / 2;
-    if (wrapAt > 0 && px >= wrapAt) px = px - wrapAt;
-    inner.style.transform = 'translateX(' + (-px) + 'px)';
-    window._tickerRAF = requestAnimationFrame(step);
-  }
-
-  // stop any CSS animation to avoid conflicts
-  inner.style.animation = 'none';
-  inner.style.willChange = 'transform';
-  if (window._tickerRAF) cancelAnimationFrame(window._tickerRAF);
-  last = performance.now();
-  window._tickerRAF = requestAnimationFrame(step);
-}
-
-window.addEventListener('load', () => {
-  // give duplication a moment then start rAF animation
-  setTimeout(() => {
-    startTickerRAF();
-  }, 50);
-});
 </script>
 </body>
 </html>
