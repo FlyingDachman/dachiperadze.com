@@ -911,18 +911,6 @@ footer {
   #cur, #cur-r { display: none; }
   a, button { cursor: pointer !important; }
 }
-
-/* Accessibility: respect users who prefer less motion */
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-  }
-  .ticker-track { animation: none !important; }
-}
-
 </style>
 </head>
 <body>
@@ -941,7 +929,7 @@ footer {
       <li><a href="#about">About</a></li>
       <li><a href="pricing.html" class="nav-cta">Services &amp; Fees</a></li>
     </ul>
-    <button class="nav-burger" id="burger" aria-label="Menu" aria-controls="drawer" aria-expanded="false" type="button">
+    <button class="nav-burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -1337,7 +1325,7 @@ footer {
   <div class="footer-top">
     <a class="footer-logo" href="index.html">DACHI<em>·</em>PERADZE</a>
     <a class="footer-contact" href="mailto:legal@dachiperadze.com">legal@dachiperadze.com</a>
-    <div class="footer-r">© 2026 Dachi Peradze<br>dachiperadze.com</div>
+    <div class="footer-r">© 2025 Dachi Peradze<br>dachiperadze.com</div>
   </div>
   <div class="footer-disc">
     This website is for informational purposes only and does not constitute legal advice. No lawyer-client relationship is established by visiting this site or submitting an enquiry. Dachi Peradze is a sports lawyer specialising in FIFA regulations, CAS arbitration, and international football law. Prior results in individual matters do not guarantee outcomes in future cases. All enquiries are treated with strict discretion.
@@ -1365,8 +1353,7 @@ document.querySelectorAll('a,button').forEach(el => {
 /* ── PROGRESS BAR ── */
 const pg = document.getElementById('pg');
 window.addEventListener('scroll', () => {
-  const scrollable = document.body.scrollHeight - window.innerHeight;
-  const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
   pg.style.width = pct + '%';
 }, { passive: true });
 
@@ -1380,14 +1367,10 @@ window.addEventListener('scroll', () => {
 const burger = document.getElementById('burger');
 const drawer = document.getElementById('drawer');
 burger.addEventListener('click', () => {
-  const isOpen = drawer.classList.toggle('open');
-  burger.setAttribute('aria-expanded', String(isOpen));
+  drawer.classList.toggle('open');
 });
 drawer.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    drawer.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
-  });
+  a.addEventListener('click', () => drawer.classList.remove('open'));
 });
 
 /* ── SCROLL REVEAL ── */
