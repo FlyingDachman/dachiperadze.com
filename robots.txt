@@ -1,1 +1,1 @@
-$(cat /home/dachi/dachiperadze-new/robots.txt)
+$(cat /home/dachi/dachiperadze-fixed/robots.txt)
