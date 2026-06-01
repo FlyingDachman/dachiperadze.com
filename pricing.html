@@ -1,1 +1,106 @@
-$(cat /home/dachi/dachiperadze-fixed/pricing.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services &amp; Fees | Dachi Peradze — FIFA &amp; CAS Sports Lawyer</title>
+<meta name="description" content="Transparent pricing for specialist football law — FIFA Tribunal representation, CAS arbitration, FFAR compliance retainer, and football contract drafting from Dachi Peradze.">
+<link rel="canonical" href="https://dachiperadze.com/pricing.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* Minimal shared design system matching the new index */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --void: #05050D; --deep: #09091A; --dark: #0D0D22; --surface: #11112A;
+  --gold: #BF9A42; --gold-hi: #D4B265; --gold-lo: #7A6028;
+  --gold-line: rgba(191,154,66,0.16); --ivory: #EDE8DC; --stone: #A09B90; --slate: #5C5750;
+  --display: 'Cormorant Garamond', Georgia, serif;
+  --ui: 'Syne', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --nav-h: 66px; --max: 1100px; --pad: 3rem;
+}
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--ui); background: var(--void); color: var(--ivory); line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index: 500;
+  background: rgba(5,5,13,0.92); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--gold-line);
+}
+.nav-in { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: var(--ui); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.26em; text-transform: uppercase; color: var(--ivory); }
+.nav-logo em { color: var(--gold); }
+
+.hero { padding: calc(var(--nav-h) + 3rem) 0 2rem; border-bottom: 1px solid var(--gold-line); }
+.hero h1 { font-family: var(--display); font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 300; line-height: 1.05; }
+
+.tiers { padding: 3rem 0 4rem; }
+.tier {
+  background: var(--deep); border: 1px solid var(--gold-line);
+  border-radius: 3px; padding: 2rem; margin-bottom: 1.5rem;
+}
+.tier h3 { font-family: var(--display); font-size: 1.4rem; margin-bottom: 0.5rem; }
+.tier .price { font-size: 1.8rem; color: var(--gold); font-weight: 500; }
+.tier ul { margin-top: 1rem; padding-left: 1.2rem; }
+.tier li { margin-bottom: 0.3rem; color: var(--stone); }
+
+footer { border-top: 1px solid var(--gold-line); padding: 2rem var(--pad); font-size: 0.72rem; color: var(--slate); }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-in">
+    <a class="nav-logo" href="index.html">DACHI<em>·</em>PERADZE</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="hero">
+    <h1>Services &amp; Fees</h1>
+    <p style="max-width:620px; margin-top:0.8rem; color:var(--stone);">Transparent pricing for specialist football law.</p>
+  </div>
+
+  <div class="tiers">
+    <div class="tier">
+      <h3>Contract Review &amp; Drafting</h3>
+      <div class="price">From €800</div>
+      <ul>
+        <li>Player employment contracts</li>
+        <li>FFAR-compliant agent agreements</li>
+        <li>Image rights &amp; transfers</li>
+        <li>Regulatory risk commentary</li>
+      </ul>
+    </div>
+    
+    <div class="tier">
+      <h3>FIFA Tribunal Representation</h3>
+      <div class="price">From €2,500 + success fee</div>
+      <ul>
+        <li>Full end-to-end representation</li>
+        <li>DRC, PSC, and Football Tribunal</li>
+        <li>Training compensation &amp; solidarity</li>
+        <li>Article 17 RSTP cases</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <h3>CAS Arbitration</h3>
+      <div class="price">From €4,000</div>
+      <ul>
+        <li>Appeals from FIFA decisions</li>
+        <li>Ordinary CAS proceedings</li>
+        <li>Hearing preparation</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="container">
+  <p>© 2026 Dachi Peradze · <a href="index.html">dachiperadze.com</a> · <a href="https://www.linkedin.com/in/dachi-peradze-3903091a7/" target="_blank">LinkedIn</a></p>
+</footer>
+</body>
+</html>
