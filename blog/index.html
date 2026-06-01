@@ -46,6 +46,47 @@ nav {
 .nav-links a:hover { color: var(--ivory); }
 .nav-links a.active { color: var(--gold); }
 
+/* Mobile nav */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+}
+.nav-burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--stone);
+  transition: 0.3s;
+}
+.nav-drawer {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  background: rgba(5,5,13,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--gold-line);
+  padding: 1.5rem var(--pad);
+  flex-direction: column;
+  gap: 1.1rem;
+  z-index: 490;
+  font-size: 0.85rem;
+}
+.nav-drawer.open { display: flex; }
+.nav-drawer a {
+  color: var(--stone);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.nav-drawer a:hover { color: var(--gold); }
+
 /* Hero */
 .blog-hero { padding: calc(var(--nav-h) + 4rem) 0 3rem; border-bottom: 1px solid var(--gold-line); }
 .blog-hero h1 { font-family: var(--display); font-size: clamp(2.6rem, 5vw, 3.8rem); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; }
@@ -114,8 +155,13 @@ footer { border-top: 1px solid var(--gold-line); padding: 2rem var(--pad); font-
 footer a { color: var(--stone); }
 
 @media (max-width: 640px) {
-  .post-card { grid-template-columns: 1fr; gap: 0.6rem; }
+  .post-card { grid-template-columns: 1fr; gap: 0.6rem; padding: 1.5rem 0; }
   .nav-links { display: none; }
+  .nav-burger { display: flex; }
+  .blog-hero h1 { font-size: 2rem; }
+  .post-date { font-size: 0.7rem; }
+  .post-title { font-size: 1.15rem; }
+  .btn-linkedin { font-size: 0.65rem; padding: 0.4rem 0.9rem; }
 }
 </style>
 </head>
@@ -131,8 +177,19 @@ footer a { color: var(--stone); }
       <a href="../pricing.html">Services &amp; Fees</a>
       <a href="https://www.linkedin.com/in/dachi-peradze-3903091a7/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
+    <button class="nav-burger" id="blog-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<div class="nav-drawer" id="blog-drawer">
+  <a href="../index.html#practice">Practice Areas</a>
+  <a href="../index.html#record">Track Record</a>
+  <a href="../index.html#about">About</a>
+  <a href="../pricing.html">Services &amp; Fees</a>
+  <a href="https://www.linkedin.com/in/dachi-peradze-3903091a7/" target="_blank" rel="noopener">LinkedIn</a>
+</div>
 
 <header class="blog-hero container">
   <div class="s-label" style="color:var(--gold); font-size:0.6rem; letter-spacing:0.3em; margin-bottom:0.8rem;">NOTES &amp; COMMENTARY</div>
@@ -184,6 +241,22 @@ footer a { color: var(--stone); }
     document.getElementById('posts').innerHTML = '<p style="color:#BF9A42">Could not load posts. Please check posts.json.</p>';
   }
 })();
+
+/* Mobile hamburger for blog */
+const burger = document.getElementById('blog-burger');
+const drawer = document.getElementById('blog-drawer');
+if (burger && drawer) {
+  burger.addEventListener('click', () => {
+    const isOpen = drawer.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(isOpen));
+  });
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
 </script>
 </body>
 </html>

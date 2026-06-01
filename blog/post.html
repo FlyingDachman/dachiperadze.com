@@ -47,6 +47,47 @@ nav {
 }
 .back-link:hover { color: var(--gold); }
 
+/* Mobile nav */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+}
+.nav-burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--stone);
+  transition: 0.3s;
+}
+.nav-drawer {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  background: rgba(5,5,13,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--gold-line);
+  padding: 1.5rem var(--pad);
+  flex-direction: column;
+  gap: 1.1rem;
+  z-index: 490;
+  font-size: 0.85rem;
+}
+.nav-drawer.open { display: flex; }
+.nav-drawer a {
+  color: var(--stone);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.nav-drawer a:hover { color: var(--gold); }
+
 /* Content */
 .post-header {
   padding: calc(var(--nav-h) + 3rem) 0 2rem;
@@ -121,6 +162,15 @@ footer {
   font-size: 0.72rem;
   color: var(--slate);
 }
+
+@media (max-width: 640px) {
+  .post-header { padding-top: calc(var(--nav-h) + 2rem); }
+  .post-title { font-size: 1.55rem; line-height: 1.2; }
+  .post-body { font-size: 0.95rem; padding: 1.5rem 0 2rem; }
+  .btn { font-size: 0.68rem; padding: 0.75rem 1.2rem; }
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+}
 </style>
 </head>
 <body>
@@ -131,8 +181,19 @@ footer {
     <a href="index.html" class="back-link">
       ← All Insights
     </a>
+    <button class="nav-burger" id="post-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<div class="nav-drawer" id="post-drawer">
+  <a href="index.html">← All Insights</a>
+  <a href="../index.html#practice">Practice Areas</a>
+  <a href="../index.html#about">About</a>
+  <a href="../pricing.html">Services &amp; Fees</a>
+  <a href="https://www.linkedin.com/in/dachi-peradze-3903091a7/" target="_blank" rel="noopener">LinkedIn</a>
+</div>
 
 <main class="container" id="main">
   <!-- Content injected by JS -->
@@ -167,6 +228,13 @@ footer {
     // Update page title
     document.title = `${post.title} | Dachi Peradze`;
 
+    let bodyHTML = `<p>${post.excerpt}</p>`;
+    if (post.content) {
+      // Split on double newlines for paragraphs
+      const paragraphs = post.content.split(/\n\s*\n/).filter(p => p.trim());
+      bodyHTML = paragraphs.map(p => `<p>${p.trim().replace(/\n/g, '<br>')}</p>`).join('');
+    }
+
     main.innerHTML = `
       <div class="post-header">
         <div class="post-date">${post.date}</div>
@@ -174,8 +242,7 @@ footer {
       </div>
 
       <div class="post-body">
-        <p>${post.excerpt}</p>
-        ${post.content ? `<p>${post.content}</p>` : ''}
+        ${bodyHTML}
       </div>
 
       <div class="cta-bar">
@@ -200,6 +267,22 @@ function showNotFound(container, message) {
       <a href="index.html" class="btn btn-ghost">← Back to Insights</a>
     </div>
   `;
+}
+
+/* Mobile hamburger */
+const postBurger = document.getElementById('post-burger');
+const postDrawer = document.getElementById('post-drawer');
+if (postBurger && postDrawer) {
+  postBurger.addEventListener('click', () => {
+    const isOpen = postDrawer.classList.toggle('open');
+    postBurger.setAttribute('aria-expanded', String(isOpen));
+  });
+  postDrawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      postDrawer.classList.remove('open');
+      postBurger.setAttribute('aria-expanded', 'false');
+    });
+  });
 }
 </script>
 </body>
