@@ -4,18 +4,10 @@
     <loc>https://dachiperadze.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-06-01</lastmod>
   </url>
   <url>
     <loc>https://dachiperadze.com/pricing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-06-01</lastmod>
-  </url>
-  <url>
-    <loc>https://dachiperadze.com/blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-06-01</lastmod>
   </url>
 </urlset>
