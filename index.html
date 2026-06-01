@@ -10,7 +10,42 @@
 <meta property="og:description" content="Specialist FIFA Tribunal, CAS arbitration and FFAR counsel — dachiperadze.com">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dachiperadze.com">
+<meta property="og:image" content="https://dachiperadze.com/assets/dachi-peradze-headshot.jpg">
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="533">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dachi Peradze | International Sports Lawyer | FIFA · CAS · FFAR">
+<meta name="twitter:description" content="Specialist counsel for FIFA Tribunal, CAS arbitration and FFAR compliance.">
+<meta name="twitter:image" content="https://dachiperadze.com/assets/dachi-peradze-headshot.jpg">
 <link rel="canonical" href="https://dachiperadze.com">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dachi Peradze",
+  "url": "https://dachiperadze.com",
+  "image": "https://dachiperadze.com/assets/dachi-peradze-headshot.jpg",
+  "jobTitle": "International Sports Lawyer",
+  "description": "Specialist counsel in FIFA Football Tribunal proceedings, CAS arbitration, FFAR compliance, and Article 17 RSTP disputes.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tbilisi",
+    "addressCountry": "GE"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/dachi-peradze-3903091a7/"
+  ],
+  "knowsAbout": [
+    "FIFA Regulations on the Status and Transfer of Players (RSTP)",
+    "FIFA Football Agent Regulations (FFAR)",
+    "Court of Arbitration for Sport (CAS)",
+    "Article 17 RSTP",
+    "Training compensation and solidarity mechanism",
+    "International football contract law"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -147,6 +182,19 @@ nav.scrolled {
 .nav-cta::after { display: none !important; }
 .nav-cta:hover { background: var(--gold-hi) !important; transform: translateY(-1px); }
 
+.nav-linkedin {
+  color: var(--stone) !important;
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: color 0.2s, opacity 0.2s;
+}
+.nav-linkedin:hover {
+  color: var(--gold) !important;
+  opacity: 1;
+}
+.nav-linkedin svg { width: 15px; height: 15px; }
+
 .nav-burger {
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: none; padding: 4px;
@@ -194,7 +242,7 @@ nav.scrolled {
 
 .hero-main {
   max-width: var(--max); margin: 0 auto;
-  padding: calc(var(--nav-h) + 1.2rem) var(--pad) 1rem;
+  padding: calc(var(--nav-h) + 1.2rem) var(--pad) 1.5rem;
   width: 100%;
   display: grid; grid-template-columns: 1.05fr 0.95fr;
   gap: 4rem; align-items: end;
@@ -507,6 +555,22 @@ blockquote.verdict-q {
 .about-img-ico svg { width: 56px; height: 56px; opacity: 0.2; display: block; margin: 0 auto 0.7rem; }
 .about-img-ico span { font-size: 0.57rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.45; }
 
+/* Real professional photo */
+.about-img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid var(--gold-line);
+  border-radius: var(--r);
+  display: block;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+.about-img-real:hover {
+  transform: scale(1.015);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
 .about-nums {
   display: grid; grid-template-columns: repeat(3,1fr);
   gap: 0; margin-bottom: 2.5rem;
@@ -715,7 +779,11 @@ footer { background: var(--void); border-top: 1px solid var(--gold-line); }
       <li><a href="#practice">Practice</a></li>
       <li><a href="#record">Track Record</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="blog/">Insights</a></li>
       <li><a href="pricing.html" class="nav-cta">Services &amp; Fees</a></li>
+      <li><a href="https://www.linkedin.com/in/dachi-peradze-3903091a7/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-linkedin" title="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 118.3 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 00.1.4V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+      </a></li>
     </ul>
     <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -726,7 +794,12 @@ footer { background: var(--void); border-top: 1px solid var(--gold-line); }
   <a href="#practice" class="d-link">Practice Areas</a>
   <a href="#record" class="d-link">Track Record</a>
   <a href="#about" class="d-link">About</a>
+  <a href="blog/" class="d-link">Insights</a>
   <a href="pricing.html" class="d-cta">Services &amp; Fees →</a>
+  <a href="https://www.linkedin.com/in/dachi-peradze-3903091a7/" target="_blank" rel="noopener" class="d-link" style="display:flex; align-items:center; gap:0.5rem;">
+    LinkedIn 
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7;"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 118.3 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 00.1.4V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+  </a>
 </div>
 
 <!-- ══ HERO ══ -->
@@ -924,8 +997,7 @@ footer { background: var(--void); border-top: 1px solid var(--gold-line); }
     <div class="record-left reveal">
       <div>
         <div class="record-badge">
-          <span class="record-badge-dot"></span>
-          Verified Tribunal Record
+          <span class="record-badge-dot"></span> Verified Tribunal Record
         </div>
         <span class="record-verdict">Ruling<br>for the<br>Client.</span>
         <p class="record-ruling">FIFA Football Tribunal · Cross-border · Slovakia</p>
@@ -977,15 +1049,14 @@ footer { background: var(--void); border-top: 1px solid var(--gold-line); }
         <div class="s-label">About</div>
         <div class="about-name">Dachi<br>Peradze</div>
         <span class="about-role">Sports Lawyer · dachiperadze.com</span>
-        <div class="about-img">
-          <div class="about-img-ico">
-            <svg viewBox="0 0 64 64" fill="none">
-              <circle cx="32" cy="22" r="13" stroke="currentColor" stroke-width="1.2"/>
-              <path d="M7 58c0-13.807 11.193-25 25-25s25 11.193 25 25" stroke="currentColor" stroke-width="1.2"/>
-            </svg>
-            <span>Photo</span>
-          </div>
-        </div>
+        <img 
+          src="assets/dachi-peradze-headshot.jpg" 
+          alt="Dachi Peradze — International Sports Lawyer specialising in FIFA, CAS and FFAR" 
+          class="about-img-real"
+          width="400" 
+          height="533"
+          loading="eager"
+        >
       </div>
       <div class="about-r reveal reveal-d2">
         <div class="about-nums">
@@ -1068,7 +1139,13 @@ footer { background: var(--void); border-top: 1px solid var(--gold-line); }
 <footer>
   <div class="footer-top">
     <a class="footer-logo" href="index.html">DACHI<em>·</em>PERADZE</a>
-    <a class="footer-contact" href="mailto:legal@dachiperadze.com">legal@dachiperadze.com</a>
+    <div style="text-align:center; font-size:0.78rem; color:var(--stone);">
+      <a class="footer-contact" href="mailto:legal@dachiperadze.com" style="display:block; margin-bottom:0.25rem;">legal@dachiperadze.com</a>
+      <a href="https://www.linkedin.com/in/dachi-peradze-3903091a7/" target="_blank" rel="noopener" style="color:var(--stone); text-decoration:none; font-size:0.72rem; letter-spacing:0.05em; display:inline-flex; align-items:center; gap:0.35rem; opacity:0.85;">
+        LinkedIn
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 118.3 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 00.1.4V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+      </a>
+    </div>
     <div class="footer-r">© 2026 Dachi Peradze<br>dachiperadze.com</div>
   </div>
   <div class="footer-disc">
@@ -1086,7 +1163,7 @@ document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; })
   cur.style.left = mx + 'px'; cur.style.top = my + 'px';
   rx += (mx - rx) * 0.13; ry += (my - ry) * 0.13;
   curR.style.left = rx + 'px'; curR.style.top = ry + 'px';
-  requestAnimationFrame(loopCursor);
+  requestAnimationFrame(loopCursor)();
 })();
 document.querySelectorAll('a,button').forEach(el => {
   el.addEventListener('mouseenter', () => document.body.classList.add('chover'));
