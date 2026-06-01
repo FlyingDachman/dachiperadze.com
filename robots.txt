@@ -1,4 +1,1 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://dachiperadze.com/sitemap.xml
+$(cat /home/dachi/dachiperadze-new/robots.txt)
