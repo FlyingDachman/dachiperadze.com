@@ -329,6 +329,7 @@ footer{background:var(--void);border-top:1px solid var(--gold-line)}
       <li><a href="#practice">Practice</a></li>
       <li><a href="#record">Track Record</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="/pricing.html">Pricing</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
       <li><a href="https://www.linkedin.com/in/dachi-peradze-3903091a7/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 118.3 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 00.1.4V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg></a></li>
@@ -341,6 +342,7 @@ footer{background:var(--void);border-top:1px solid var(--gold-line)}
   <a href="#practice">Practice Areas</a>
   <a href="#record">Track Record</a>
   <a href="#about">About</a>
+  <a href="/pricing.html">Pricing</a>
   <a href="#faq">FAQ</a>
   <a href="#contact" class="d-cta">Contact →</a>
   <a href="https://www.linkedin.com/in/dachi-peradze-3903091a7/" target="_blank" rel="noopener">LinkedIn</a>
@@ -541,7 +543,7 @@ const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.t
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 document.querySelectorAll('.faq-trigger').forEach(t=>{t.addEventListener('click',()=>{const item=t.closest('.faq-item'),ans=t.nextElementSibling,open=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-answer').style.maxHeight='0';i.querySelector('.faq-trigger').setAttribute('aria-expanded','false')});if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';t.setAttribute('aria-expanded','true')}})});
 const contactForm=document.getElementById('contactForm'),toast=document.getElementById('toast');
-contactForm.addEventListener('submit',async e=>{e.preventDefault();const btn=contactForm.querySelector('button[type="submit"]'),orig=btn.innerHTML;btn.innerHTML='Sending...';btn.disabled=true;try{const r=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{'Accept':'application/json'}});if(r.ok){toast.querySelector('.toast-text strong').textContent='Consultation Requested';toast.querySelector('.toast-text span').textContent="We'll respond within 48 hours.";toast.classList.add('show');contactForm.reset()}else throw new Error()}catch(err){toast.querySelector('.toast-text strong').textContent='Submission failed';toast.querySelector('.toast-text span').textContent='Please email legal@dachiperadze.com directly.';toast.classList.add('show')}btn.innerHTML=orig;btn.disabled=false;setTimeout(()=>{if(toast.classList.contains('show'))toast.classList.remove('show')},5000)});
+contactForm.addEventListener('submit',async e=>{e.preventDefault();const btn=contactForm.querySelector('button[type="submit"]'),orig=btn.innerHTML;btn.innerHTML='Sending...';btn.disabled=true;try{const r=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{'Accept':'application/json'}});if(r.ok){toast.querySelector('.toast-text strong').textContent='Consultation Requested';toast.querySelector('.toast-text span').textContent="We'll respond within 48 hours.";toast.classList.add('show');contactForm.reset()}else{let d='';try{const j=await r.json();d=(j.errors||[]).map(x=>x.message||(x.field+' '+x.code)).join('; ')||j.error||''}catch(_){}throw new Error(d||('HTTP '+r.status))}}catch(err){console.error('Formspree submission failed:',err&&err.message?err.message:err);toast.querySelector('.toast-text strong').textContent='Submission failed';toast.querySelector('.toast-text span').textContent='Please email legal@dachiperadze.com directly.';toast.classList.add('show')}btn.innerHTML=orig;btn.disabled=false;setTimeout(()=>{if(toast.classList.contains('show'))toast.classList.remove('show')},5000)});
 document.getElementById('currentYear').textContent=new Date().getFullYear();
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-80,behavior:'smooth'})})});
 </script>

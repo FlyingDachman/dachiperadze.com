@@ -343,8 +343,13 @@ contactForm.addEventListener('submit',async(e)=>{
       toast.querySelector('.toast-text span').textContent="We'll respond within 48 hours.";
       toast.classList.add('show');
       contactForm.reset();
-    }else{throw new Error('Failed')}
+    }else{
+      let detail='';
+      try{const j=await response.json();detail=(j.errors||[]).map(x=>x.message||(x.field+' '+x.code)).join('; ')||j.error||''}catch(_){}
+      throw new Error(detail||('HTTP '+response.status))
+    }
   }catch(error){
+    console.error('Formspree submission failed:',error&&error.message?error.message:error);
     toast.querySelector('.toast-text strong').textContent='Submission failed';
     toast.querySelector('.toast-text span').textContent='Please email legal@dachiperadze.com directly.';
     toast.classList.add('show');
