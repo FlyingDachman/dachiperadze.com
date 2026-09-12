@@ -1,7 +1,7 @@
 Peradze Sports Law — website package
 
 Files
-- legal-services.html
+- index.html
 - legal-services.css
 - legal-services.js
 
