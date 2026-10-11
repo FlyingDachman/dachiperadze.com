@@ -7,10 +7,14 @@ The site is a responsive, buildless static website hosted by GitHub Pages at htt
 ## Contact
 
 - Email: legal@dachiperadze.com
-- Call: +995 597 982 202
+- WhatsApp: https://wa.me/995597982202
 - Text: SMS to the same number
 
-Telephone and SMS links open the visitor's supported calling or messaging application. Email links open their email application. There are no payment links, prices, contact forms, trackers or stored visitor data.
+The phone-number link opens WhatsApp. SMS and email links open the visitor's corresponding applications.
+
+The enquiry form posts to the existing Formspree endpoint, `https://formspree.io/f/maeyzglo`. It collects a name, email address, sport and message; browser validation checks the required fields and email format. Formspree handles delivery and its submission confirmation. A hidden honeypot field helps filter automated submissions. The form works without JavaScript.
+
+There are no prices, payment links or analytics trackers. The website does not store submitted information locally; enquiry submissions are processed by Formspree according to the existing form configuration.
 
 ## Files
 
