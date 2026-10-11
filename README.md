@@ -29,3 +29,9 @@ There are no prices, payment links or analytics trackers. The website does not s
 ## Preview
 
 Serve the repository root with any static web server. No installation or build step is required.
+
+## Search visibility
+
+Five linked sport pages describe the matters covered and the information useful for an initial enquiry. Each page has a distinct title, description, canonical URL, social preview tags and structured data. `sitemap.xml` lists the six public pages; `robots.txt` advertises the sitemap.
+
+To monitor discovery, verify the site in Google Search Console and Bing Webmaster Tools, then submit `https://dachiperadze.com/sitemap.xml`. Ownership verification requires access to the relevant webmaster account or a verification token supplied by its owner. No analytics, tracking pixels or advertising accounts are configured.
