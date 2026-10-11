@@ -1,26 +1,31 @@
-Peradze Sports Law — website package
+# Dachi Peradze
 
-Files
-- index.html
-- legal-services.css
-- legal-services.js
+Personal website for Dachi Peradze — sports law and advisory across all sports.
 
-Formspree
-The contact form and assessment-service form use:
-https://formspree.io/f/maeyzglo
+The site is a responsive, buildless static website hosted by GitHub Pages at https://dachiperadze.com. It uses HTML, CSS and a small JavaScript file for the mobile navigation. Service and FAQ disclosures use native accessible details elements and remain usable without JavaScript.
 
-Stripe
-Exact-fee services are wired to Stripe Payment Links in legal-services.js. Add your real Payment Link URLs in STRIPE_LINKS for:
-- Contract Review — EUR 300
-- Football Agent & Agency Agreement Drafting — EUR 2,000
-- 1-on-1 Legal Consultation — EUR 100 / 45 minutes
+## Contact
 
-Important
-The assessment-priced matters remain request/assessment based:
-- Contract Drafting & Negotiation — from EUR 1,200
-- Salary / Termination Dispute — from EUR 1,000
-- FIFA Football Tribunal Claim / Representation — from EUR 2,500
-- CAS Arbitration — from EUR 4,500
-- FFAR / Football Agent Regulatory Advice — assessment
+- Email: legal@dachiperadze.com
+- Call: +995 597 982 202
+- Text: SMS to the same number
 
-The preliminary clause screen is deliberately described as a phrase-based educational screening tool, not AI and not legal advice.
+Telephone and SMS links open the visitor's supported calling or messaging application. Email links open their email application. There are no payment links, prices, contact forms, trackers or stored visitor data.
+
+## Files
+
+- `index.html` — content, search/social metadata and structured data
+- `legal-services.css` — responsive styles, focus states, print and reduced-motion support
+- `legal-services.js` — mobile navigation and current copyright year
+- `assets/stadium.webp` — optimised original hero illustration
+- `assets/stadium.jpg` — image fallback and social sharing image
+- `assets/favicon.svg` — DP monogram
+- `CNAME` — existing custom domain
+
+## Preview
+
+Serve the repository root with any static web server. No installation or build step is required.
+
+## Image
+
+Original stadium imagery generated with the built-in ImageGen tool. Brief: a sophisticated editorial architectural photograph of an empty athletics stadium at blue hour, sweeping terracotta track, midnight blue sky, restrained amber lights, cinematic composition with dark space on the left for typography; no text or logos. This is illustrative imagery, not a claimed client venue or project.
