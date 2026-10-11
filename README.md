@@ -1,6 +1,6 @@
 # Dachi Peradze
 
-Personal website for Dachi Peradze — sports law and advisory across all sports.
+Personal website for Dachi Peradze — sports law and advisory for football, basketball, tennis, rugby and esports.
 
 The site is a responsive, buildless static website hosted by GitHub Pages at https://dachiperadze.com. It uses HTML, CSS and a small JavaScript file for the mobile navigation. Service and FAQ disclosures use native accessible details elements and remain usable without JavaScript.
 
