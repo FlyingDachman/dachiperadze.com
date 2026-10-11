@@ -17,7 +17,7 @@ Telephone and SMS links open the visitor's supported calling or messaging applic
 - `index.html` — content, search/social metadata and structured data
 - `legal-services.css` — responsive styles, focus states, print and reduced-motion support
 - `legal-services.js` — mobile navigation and current copyright year
-- `assets/stadium.webp` — optimised original hero illustration
+- `assets/stadium.webp` — optimised stadium hero image
 - `assets/stadium.jpg` — image fallback and social sharing image
 - `assets/favicon.svg` — DP monogram
 - `CNAME` — existing custom domain
@@ -25,7 +25,3 @@ Telephone and SMS links open the visitor's supported calling or messaging applic
 ## Preview
 
 Serve the repository root with any static web server. No installation or build step is required.
-
-## Image
-
-Original stadium imagery generated with the built-in ImageGen tool. Brief: a sophisticated editorial architectural photograph of an empty athletics stadium at blue hour, sweeping terracotta track, midnight blue sky, restrained amber lights, cinematic composition with dark space on the left for typography; no text or logos. This is illustrative imagery, not a claimed client venue or project.
