@@ -34,7 +34,7 @@ Serve the repository root with any static web server. No installation or build s
 
 Five linked sport pages describe the matters covered and the information useful for an initial enquiry. Each page has a distinct title, description, canonical URL, social preview tags and structured data. `sitemap.xml` lists the six public pages; `robots.txt` advertises the sitemap.
 
-To monitor discovery, verify the site in Google Search Console and Bing Webmaster Tools, then submit `https://dachiperadze.com/sitemap.xml`. Ownership verification requires access to the relevant webmaster account or a verification token supplied by its owner. Google Analytics 4 is configured as described below. No advertising accounts are linked by this website setup.
+Google Search Console ownership is verified through the homepage meta tag. Keep that tag in place. To monitor discovery in Bing, verify the site in Bing Webmaster Tools and submit `https://dachiperadze.com/sitemap.xml`. Ownership verification requires access to the relevant webmaster account or a verification token supplied by its owner. Google Analytics 4 is configured as described below. No advertising accounts are linked by this website setup.
 
 ## Engagement measurement
 
